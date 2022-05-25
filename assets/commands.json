@@ -1,0 +1,376 @@
+[
+	{
+		"name": "answer",
+		"description": "Answers a paranoia question sent to you.",
+		"options": [
+			{
+				"name": "answer",
+				"description": "The answer to the paranoia question.",
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "dare",
+		"description": "Gives a dare that has to be completed.",
+		"options": [
+			{
+				"name": "rating",
+				"description": "The maturity level of the topics the question can relate to.",
+				"required": false
+			}
+		]
+	},
+	{ "name": "help", "description": "Get a list of commands.", "options": [] },
+	{
+		"name": "invite",
+		"description": "Add the bot to another server.",
+		"options": []
+	},
+	{
+		"name": "nhie",
+		"description": "Gives a random Never Have I Ever question to be answered.",
+		"options": [
+			{
+				"name": "rating",
+				"description": "The maturity level of the topics the question can relate to.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "paranoia",
+		"description": "Gives a paranoia question or sends one to a user.",
+		"options": [
+			{
+				"name": "target",
+				"description": "The user to send a paranoia question to.",
+				"required": false
+			},
+			{
+				"name": "rating",
+				"description": "The maturity level of the topics the question can relate to.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "ping",
+		"description": "Check if the bot is online.",
+		"options": []
+	},
+	{
+		"name": "premium check",
+		"description": "Check if this current server has premium activated.",
+		"options": []
+	},
+	{
+		"name": "premium list",
+		"description": "List your premium servers.",
+		"options": []
+	},
+	{
+		"name": "premium activate",
+		"description": "Add the current server as a premium server.",
+		"options": []
+	},
+	{
+		"name": "premium deactivate",
+		"description": "Remove a server from your premium slots.",
+		"options": [
+			{
+				"name": "server",
+				"description": "The server id to remove from your premium slots (found from /premium list) default current server.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "questions list",
+		"description": "List all the custom questions added so far.",
+		"options": [
+			{
+				"name": "type",
+				"description": "The type of question to list.",
+				"required": false
+			},
+			{
+				"name": "rating",
+				"description": "The rating of questions to list.",
+				"required": false
+			},
+			{
+				"name": "page",
+				"description": "The page number of questions of list.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "questions add",
+		"description": "Adds a new custom question for this server.",
+		"options": [
+			{
+				"name": "type",
+				"description": "The type of question to add",
+				"required": true
+			},
+			{
+				"name": "rating",
+				"description": "The rating of question to add.",
+				"required": true
+			},
+			{
+				"name": "question",
+				"description": "The question to add.",
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "questions remove",
+		"description": "Removes a custom question from this server.",
+		"options": [
+			{
+				"name": "id",
+				"description": "The ID of the question to remove (get the ID using /customquestion list).",
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "questions view",
+		"description": "View a custom question from this server.",
+		"options": [
+			{
+				"name": "id",
+				"description": "The id of the question to view (get the ID using /questions list).",
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "questions update",
+		"description": "Update a custom question from this server.",
+		"options": [
+			{
+				"name": "id",
+				"description": "The id of the question to update (get the ID using /customquestion list).",
+				"required": true
+			},
+			{
+				"name": "type",
+				"description": "The new type of question.",
+				"required": false
+			},
+			{
+				"name": "rating",
+				"description": "The new rating of question.",
+				"required": false
+			},
+			{
+				"name": "question",
+				"description": "The new question text.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "random",
+		"description": "Gives a random question from any category (truth, dare, paranoia, wyr, nhie).",
+		"options": [
+			{
+				"name": "rating",
+				"description": "The maturity level of the topics the question can relate to.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "serversettings view",
+		"description": "View premium server settings.",
+		"options": []
+	},
+	{
+		"name": "serversettings showparanoia",
+		"description": "Set how often paranoia questions are shown.",
+		"options": [
+			{
+				"name": "frequency",
+				"description": "How often questions are shown as a percent chance (0 for never, 100 for always).",
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "serversettings disablequestion",
+		"description": "Disable a global question from being shown in this server.",
+		"options": [
+			{
+				"name": "id",
+				"description": "The id of the question to disable.",
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "serversettings enablequestion",
+		"description": "Enable a global question that has been disabled.",
+		"options": [
+			{
+				"name": "id",
+				"description": "The ID of the question to enable.",
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "serversettings toggleglobals",
+		"description": "Disable/enable all global questions in this server.",
+		"options": []
+	},
+	{
+		"name": "serversettings togglebuttons",
+		"description": "Disable/enable buttons showing on question messages.",
+		"options": []
+	},
+	{
+		"name": "settings view",
+		"description": "View a channel's settings.",
+		"options": [
+			{
+				"name": "channel",
+				"description": "The channel to view the settings for.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "settings disablerating",
+		"description": "Disable a question rating for a channel.",
+		"options": [
+			{
+				"name": "rating",
+				"description": "The rating to disable.",
+				"required": true
+			},
+			{
+				"name": "channel",
+				"description": "The channel to disable the rating in.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "settings enablerating",
+		"description": "Enable a question rating for a channel.",
+		"options": [
+			{
+				"name": "rating",
+				"description": "The rating to enable.",
+				"required": true
+			},
+			{
+				"name": "channel",
+				"description": "The channel to enable the rating in.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "settings mute",
+		"description": "Disable all commands in a channel.",
+		"options": [
+			{
+				"name": "channel",
+				"description": "The channel to mute the bot in.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "settings unmute",
+		"description": "Reenable all commands in a channel.",
+		"options": [
+			{
+				"name": "channel",
+				"description": "The channel to unmute the bot in.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "settings muteserver",
+		"description": "Disable all commands in all channels serverwide.",
+		"options": []
+	},
+	{
+		"name": "settings unmuteserver",
+		"description": "Reenable all commands in all channels serverwide.",
+		"options": []
+	},
+	{
+		"name": "skip",
+		"description": "Skips a paranoia question sent to you if the question is stuck.",
+		"options": []
+	},
+	{
+		"name": "stats",
+		"description": "List some statistics on the bot!",
+		"options": []
+	},
+	{
+		"name": "suggest",
+		"description": "Suggest a question to be added to the bot.",
+		"options": [
+			{
+				"name": "type",
+				"description": "The command the question will be used for.",
+				"required": true
+			},
+			{
+				"name": "rating",
+				"description": "The maturity level of the topics the question can relate to.",
+				"required": true
+			},
+			{
+				"name": "question",
+				"description": "The question that will ba asked.",
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "tod",
+		"description": "Gives a random truth or dare question.",
+		"options": [
+			{
+				"name": "rating",
+				"description": "The maturity level of the topics the question can relate to.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "truth",
+		"description": "Gives a random question that has to be answered truthfully.",
+		"options": [
+			{
+				"name": "rating",
+				"description": "The maturity level of the topics the question can relate to.",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "wyr",
+		"description": "Gives a random Would You Rather question to be answered.",
+		"options": [
+			{
+				"name": "rating",
+				"description": "The maturity level of the topics the question can relate to.",
+				"required": false
+			}
+		]
+	}
+]

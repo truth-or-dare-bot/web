@@ -1,9 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --background: #fff;
+  background-color: var(--background);
+  
+}
+
+html.dark {
+  --background: #0C142C;
+  background-color: var(--background);
+}
+
+.backgroundCurves {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c388.772C75.575%2c387.922%2c157.579%2c383.949%2c215.699%2c335.634C272.14%2c288.714%2c283.202%2c208.838%2c301.844%2c137.848C317.724%2c77.374%2c321.67%2c16.845%2c315.758%2c-45.399C309.577%2c-110.471%2c307.358%2c-179.922%2c266.794%2c-231.178C225.586%2c-283.249%2c159.17%2c-306.414%2c95.173%2c-324.13C31.948%2c-341.632%2c-34.131%2c-349.033%2c-97.489%2c-332.019C-161.748%2c-314.764%2c-214.732%2c-273.674%2c-263.052%2c-227.935C-315.744%2c-178.058%2c-366.777%2c-124.971%2c-389.14%2c-55.95C-413.953%2c20.632%2c-427.184%2c106.613%2c-395.412%2c180.579C-363.421%2c255.055%2c-290.561%2c302.757%2c-218.839%2c340.52C-151.376%2c376.041%2c-76.238%2c389.629%2c0%2c388.772' fill='rgba(88,101,242,0.1)'%3e%3c/path%3e%3cpath d='M1440 1217.25C1563.036 1211.3139999999999 1672.923 1150.274 1776.455 1083.534 1879.862 1016.874 2004.5520000000001 951.2760000000001 2036.784 832.5419999999999 2068.697 714.984 1980.4070000000002 602.594 1938.0140000000001 488.396 1904.6689999999999 398.571 1861.943 318.59000000000003 1814.99 235.06900000000002 1755.188 128.69299999999998 1730.509-8.200000000000045 1624.68-68.96400000000006 1513.726-132.67100000000005 1363.703-146.88300000000004 1249.204-89.79200000000003 1136.718-33.70500000000004 1124.064 120.142 1046.715 219.21699999999998 974.8879999999999 311.219 842.306 356.947 812.357 469.759 781.782 584.932 843.679 701.405 889.505 811.403 936.765 924.844 983.0989999999999 1044.1109999999999 1082.0149999999999 1117.036 1183.817 1192.088 1313.67 1223.345 1440 1217.25' fill='rgba(237, 66, 69, .1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+
+html.dark .backgroundCurves {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(12%2c 20%2c 44%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c388.772C75.575%2c387.922%2c157.579%2c383.949%2c215.699%2c335.634C272.14%2c288.714%2c283.202%2c208.838%2c301.844%2c137.848C317.724%2c77.374%2c321.67%2c16.845%2c315.758%2c-45.399C309.577%2c-110.471%2c307.358%2c-179.922%2c266.794%2c-231.178C225.586%2c-283.249%2c159.17%2c-306.414%2c95.173%2c-324.13C31.948%2c-341.632%2c-34.131%2c-349.033%2c-97.489%2c-332.019C-161.748%2c-314.764%2c-214.732%2c-273.674%2c-263.052%2c-227.935C-315.744%2c-178.058%2c-366.777%2c-124.971%2c-389.14%2c-55.95C-413.953%2c20.632%2c-427.184%2c106.613%2c-395.412%2c180.579C-363.421%2c255.055%2c-290.561%2c302.757%2c-218.839%2c340.52C-151.376%2c376.041%2c-76.238%2c389.629%2c0%2c388.772' fill='%230a1023'%3e%3c/path%3e%3cpath d='M1440 1217.25C1563.036 1211.3139999999999 1672.923 1150.274 1776.455 1083.534 1879.862 1016.874 2004.5520000000001 951.2760000000001 2036.784 832.5419999999999 2068.697 714.984 1980.4070000000002 602.594 1938.0140000000001 488.396 1904.6689999999999 398.571 1861.943 318.59000000000003 1814.99 235.06900000000002 1755.188 128.69299999999998 1730.509-8.200000000000045 1624.68-68.96400000000006 1513.726-132.67100000000005 1363.703-146.88300000000004 1249.204-89.79200000000003 1136.718-33.70500000000004 1124.064 120.142 1046.715 219.21699999999998 974.8879999999999 311.219 842.306 356.947 812.357 469.759 781.782 584.932 843.679 701.405 889.505 811.403 936.765 924.844 983.0989999999999 1044.1109999999999 1082.0149999999999 1117.036 1183.817 1192.088 1313.67 1223.345 1440 1217.25' fill='%230e1835'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 a {
@@ -13,4 +40,34 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.discord-light-theme :is(.discord-embed-title, .discord-replied-message-username) {
+	color: #060607
+}
+
+.discord-light-theme .discord-embed-footer {
+  color: #2e3338
+}
+
+.discord-light-theme .discord-embed .discord-embed-wrapper {
+  background-color: #f2f3f5;
+}
+
+.discord-light-theme .discord-button.discord-button-secondary {
+  color: #fff
+}
+
+.discord-light-theme .discord-replied-message .discord-replied-message-content:hover {
+  color: #00aff4;
 }
