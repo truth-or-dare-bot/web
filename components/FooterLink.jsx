@@ -13,7 +13,7 @@ export default function FooterLink({ children, href, external = false }) {
 			{children}
 		</a>
 	) : (
-		<Link href={href}>
+		<Link href={href} scroll={false}>
 			<a className={classes}>{children}</a>
 		</Link>
 	);

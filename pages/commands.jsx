@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import commands from "../assets/commands.json";
 import CommandListCommand from "../components/CommandListCommand";
+import CommandsBrokenDropdown from "../components/CommandsBrokenDropdown";
 
 const commandOrder = [
 	"truth",
@@ -52,6 +53,7 @@ export default function IndexPage() {
 						<br />
 						Type &quot;/&quot; on your keyboard to see them!
 					</p>
+					<CommandsBrokenDropdown />
 				</div>
 				<div className="mt-6 max-w-5xl p-4 rounded-lg mx-auto w-full">
 					<div>

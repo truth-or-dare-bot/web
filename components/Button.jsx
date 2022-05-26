@@ -21,7 +21,7 @@ export default function Button({
 			{children}
 		</a>
 	) : (
-		<Link href={href}>
+		<Link href={href} scroll={false}>
 			<button className={classes}>{children}</button>
 		</Link>
 	);

@@ -43,7 +43,7 @@ export default function Footer() {
 							</div>
 
 							<div className="p-1 flex-col flex">
-								<h3 className="font-bold uppercase">Product</h3>
+								<h2 className="font-bold uppercase">Product</h2>
 								<FooterLink href="/invite" external>
 									Invite Bot
 								</FooterLink>
@@ -52,12 +52,12 @@ export default function Footer() {
 									href="https://github.com/tandpfun/truth-or-dare"
 									external
 								>
-									Github
+									GitHub
 								</FooterLink>
 							</div>
 
 							<div className="p-1 flex-col flex">
-								<h3 className="font-bold uppercase">Resources</h3>
+								<h2 className="font-bold uppercase">Resources</h2>
 								<FooterLink
 									href="https://docs.truthordarebot.xyz/api-docs"
 									external
@@ -73,13 +73,13 @@ export default function Footer() {
 							</div>
 
 							<div className="p-1 flex-col flex">
-								<h3 className="font-bold uppercase">Legal</h3>
+								<h2 className="font-bold uppercase">Legal</h2>
 								<FooterLink href="/privacy">Privacy</FooterLink>
 								<FooterLink href="/terms">Terms</FooterLink>
 							</div>
 
 							<div className="p-1 flex-col flex">
-								<h3 className="font-bold text-lg">Truth or Dare Premium</h3>
+								<h2 className="font-bold text-lg">Truth or Dare Premium</h2>
 								<p className=" dark:text-gray-300">
 									Custom questions and much more!
 								</p>

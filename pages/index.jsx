@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import dynamic from "next/dynamic";
 import Divider from "../components/Divider";
-import Fade from "react-reveal/Fade";
+import Fade from "react-reveal";
 import Image from "next/image";
 // @ts-ignore
 import GamesImage from "../assets/img/games.svg";

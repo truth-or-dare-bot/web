@@ -2,15 +2,8 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-export default function NavItem({
-	children,
-	href,
-	external = false,
-	hiddenOnMobile = false,
-}) {
-	const classes = `dark:hover:bg-white/10 hover:bg-black/10 p-2 transition rounded-lg ${
-		hiddenOnMobile ? "hidden sm:inline" : ""
-	}`;
+export default function NavItem({ children, href, external = false }) {
+	const classes = `dark:hover:md:bg-white/10 hover:md:bg-black/10 transition rounded-lg md:p-2 py-1`;
 
 	return external ? (
 		<a
@@ -23,7 +16,7 @@ export default function NavItem({
 			<FontAwesomeIcon className="ml-2" icon={faArrowUpRightFromSquare} />
 		</a>
 	) : (
-		<Link href={href}>
+		<Link href={href} scroll={false}>
 			<a className={classes}>{children}</a>
 		</Link>
 	);

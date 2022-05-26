@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Moon from "./icons/Moon";
 import Sun from "./icons/Sun";
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher({ className = "" }) {
 	const [mounted, setMounted] = useState(false);
 	const { resolvedTheme, setTheme } = useTheme();
 
@@ -14,7 +14,7 @@ export default function ThemeSwitcher() {
 
 	return (
 		<button
-			className="dark:hover:bg-white/10 hover:bg-black/10 transition p-2 rounded-lg"
+			className={`md:dark:hover:bg-white/10 md:hover:bg-black/10 transition p-2 rounded-lg ${className}`}
 			onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
 			aria-label="Change theme"
 		>
