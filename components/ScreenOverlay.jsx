@@ -8,7 +8,7 @@ export default function ScreenLoader({
 }) {
 	return (
 		<div
-			className={`fixed inset-0 z-[999] backdrop-blur-lg w-full h-full overflow-hidden flex items-center justify-center ${
+			className={`fixed inset-0 z-[999] flex h-full w-full items-center justify-center overflow-hidden backdrop-blur-lg ${
 				show ? "" : "hidden"
 			}`}>
 			<div className="flex flex-col items-center">
@@ -17,7 +17,7 @@ export default function ScreenLoader({
 						<FontAwesomeIcon icon={faTriangleExclamation} />
 					) : (
 						<svg
-							className="animate-spin dark:text-white h-16 w-16"
+							className="h-16 w-16 animate-spin dark:text-white"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ export default function ScreenLoader({
 					)}
 				</div>
 
-				<div className="mt-2 text-center px-2">{message}</div>
+				<div className="mt-2 px-2 text-center">{message}</div>
 			</div>
 		</div>
 	);

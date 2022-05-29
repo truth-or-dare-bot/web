@@ -28,20 +28,20 @@ export default function Navbar() {
 
 	return (
 		<div className="flex justify-center">
-			<div className="backdrop-blur-lg z-[100] w-[90%] md:w-[60rem] fixed top-0 px-4 py-2 my-4 rounded-md dark:bg-white/5 bg-black/5 dark:border-white/10 border-black/10 border mx-auto">
+			<div className="fixed top-0 z-[100] my-4 mx-auto w-[90%] rounded-md border border-black/10 bg-black/5 px-4 py-2 backdrop-blur-lg dark:border-white/10 dark:bg-white/5 lg:w-[60rem]">
 				<div className="flex items-center">
 					<Link href="/">
 						<a title="Home">
-							<Logo className="w-8 h-8" />
+							<Logo className="h-8 w-8" />
 						</a>
 					</Link>
-					<div className="ml-auto md:hidden flex items-center">
-						<ThemeSwitcher className="p-1 mr-2" />
-						<button className="text-xl p-1" onClick={collapseMenu} aria-label="Open menu">
+					<div className="ml-auto flex items-center md:hidden">
+						<ThemeSwitcher className="mr-2 p-1" />
+						<button className="p-1 text-xl" onClick={collapseMenu} aria-label="Open menu">
 							<FontAwesomeIcon icon={faBars} />
 						</button>
 					</div>
-					<div className="hidden md:flex items-center w-full">
+					<div className="hidden w-full items-center md:flex">
 						<div className="ml-3">
 							<NavItem href="/">Home</NavItem>
 							<NavItem href="/commands">Commands</NavItem>
@@ -53,7 +53,7 @@ export default function Navbar() {
 						<div className="ml-auto flex items-center">
 							<a
 								href="/invite"
-								className="hover:bg-discord-blurple/30 bg-discord-blurple/20 text-discord-blurple font-semibold px-2 py-1 transition rounded-lg mr-2 items-center"
+								className="mr-2 items-center rounded-lg bg-discord-blurple/20 px-2 py-1 font-semibold text-discord-blurple transition hover:bg-discord-blurple/30"
 								target="_blank"
 								rel="noopener noreferrer">
 								<FontAwesomeIcon className="mr-2" icon={faDiscord} />
@@ -63,7 +63,7 @@ export default function Navbar() {
 						</div>
 					</div>
 				</div>
-				<div className="md:hidden overflow-hidden transition-[height] duration-300 h-0" ref={collapseElement}>
+				<div className="h-0 overflow-hidden transition-[height] duration-300 md:hidden" ref={collapseElement}>
 					<div className="mtr-2 flex flex-col ">
 						<NavItem href="/">Home</NavItem>
 						<NavItem href="/commands">Commands</NavItem>

@@ -35,9 +35,9 @@ export default function IndexPage() {
 				title="Truth or Dare Bot - Commands"
 				description="Need help with commands? Here's a list of Truth or Dare Bot's slash commands and how to fix commands not working properly."
 			/>
-			<div className="flex flex-col mt-24 pb-8 md:pb-32">
-				<div className="max-w-4xl mx-auto md:mt-12 text-center px-2">
-					<h1 className="font-bold text-4xl">Commands</h1>
+			<div className="mt-24 flex flex-col pb-8 md:pb-32">
+				<div className="mx-auto max-w-4xl px-2 text-center md:mt-12">
+					<h1 className="text-4xl font-bold">Commands</h1>
 					<p className="text-lg">
 						Truth or Dare Bot&apos;s commands are built into Discord with Slash Commands.
 						<br />
@@ -45,10 +45,10 @@ export default function IndexPage() {
 					</p>
 					<CommandsBrokenDropdown />
 				</div>
-				<div className="mt-6 max-w-5xl p-4 rounded-lg mx-auto w-full">
+				<div className="mx-auto mt-6 w-full max-w-5xl rounded-lg p-4">
 					<div>
 						<input
-							className="w-full rounded-md h-12 p-4 border border-gray-600 focus:border-2 focus:border-discord-blurple hover:border-discord-blurple bg-transparent transition outline-none"
+							className="h-12 w-full rounded-md border border-gray-600 bg-transparent p-4 outline-none transition hover:border-discord-blurple focus:border-2 focus:border-discord-blurple "
 							type="text"
 							placeholder="🔎 Search commands"
 							value={query}

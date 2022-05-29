@@ -193,21 +193,21 @@ export default function PremiumPage() {
 			<PremiumSuccessModal show={showModal} transaction={transaction} state={setModal} />
 			<div className="flex flex-col pb-8 md:pb-32">
 				<div className="premiumHeader pt-24 pb-24">
-					<div className="md:mt-24 px-6 mx-auto">
+					<div className="mx-auto px-6 md:mt-24">
 						<div className="text-center text-white">
-							<h1 className="font-extrabold text-6xl">Truth or Dare Premium</h1>
-							<h2 className="text-3xl mt-2">Unlock premium features and support the development of the bot!</h2>
+							<h1 className="text-6xl font-extrabold">Truth or Dare Premium</h1>
+							<h2 className="mt-2 text-3xl">Unlock premium features and support the development of the bot!</h2>
 							<div className="mt-4">
 								<Button
 									href="https://docs.truthordarebot.xyz/premium-docs"
-									className="px-4 py-2 text-white"
+									className="px-4 py-2 !text-white"
 									external
 									icon={faBook}>
 									Premium Docs
 								</Button>
 								<Button
 									onClick={openManagementPortal}
-									className="sm:ml-2 sm:mt-0 mt-2 px-4 py-2 text-white"
+									className="mt-2 px-4 py-2 !text-white sm:ml-2 sm:mt-0"
 									icon={faCartShopping}>
 									Manage Subscription
 								</Button>
@@ -215,14 +215,14 @@ export default function PremiumPage() {
 						</div>
 					</div>
 				</div>
-				<div className="mt-16 mx-2">
-					<div className="max-w-2xl mx-auto text-center">
-						<h1 className="font-extrabold text-5xl bg-gradient-to-r from-violet-600 to-red-500 bg-clip-text text-transparent">
+				<div className="mx-2 mt-16">
+					<div className="mx-auto max-w-2xl text-center">
+						<h1 className="bg-gradient-to-r from-violet-600 to-red-500 bg-clip-text text-5xl font-extrabold text-transparent">
 							Premium Plans
 						</h1>
 					</div>
 					<div
-						className="mt-8 flex flex-col md:flex-row justify-center gap-8 max-w-7xl mx-auto px-4"
+						className="mx-auto mt-8 flex max-w-7xl flex-col justify-center gap-8 px-4 md:flex-row"
 						style={{ flex: "1 1 0px" }}>
 						{premiumPlans.map((props, index) => (
 							<div className="flex-1" key={index}>
@@ -233,50 +233,50 @@ export default function PremiumPage() {
 						))}
 					</div>
 				</div>
-				<div className="mt-32 mx-2">
-					<div className="max-w-2xl mx-auto text-center">
-						<h1 className="font-extrabold text-5xl bg-gradient-to-r from-violet-600 to-red-500 bg-clip-text text-transparent">
+				<div className="mx-2 mt-32">
+					<div className="mx-auto max-w-2xl text-center">
+						<h1 className="bg-gradient-to-r from-violet-600 to-red-500 bg-clip-text text-5xl font-extrabold text-transparent">
 							Premium Perks
 						</h1>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 justify-center my-12 md:my-24 text-left max-w-7xl gap-12 px-8 mx-auto">
+					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
 						<Fade bottom>
-							<div className="col-span-1 justify-center my-auto">
-								<h2 className="font-bold text-4xl">Custom questions</h2>
-								<p className="text-xl mt-2">
+							<div className="col-span-1 my-auto justify-center">
+								<h2 className="text-4xl font-bold">Custom questions</h2>
+								<p className="mt-2 text-xl">
 									With premium, you can <b>add your own</b> questions to the bot. Add fun questions you came up with, or
 									inside jokes with your friends! You can also disable the global question list so the bot only shows
 									the questions you created.
 								</p>
 							</div>
-							<div className="col-span-1 justify-center hidden md:block">
+							<div className="col-span-1 hidden justify-center md:block">
 								<CustomQuestionsExample />
 							</div>
 						</Fade>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 justify-center my-12 md:my-24 text-left max-w-7xl gap-12 px-8 mx-auto">
+					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
 						<Fade bottom>
-							<div className="col-span-1 justify-center p-4 my-auto hidden md:block select-none">
+							<div className="col-span-1 my-auto hidden select-none justify-center p-4 md:block">
 								<DisableDefaultsExample />
 							</div>
-							<div className="col-span-1 justify-center my-auto">
-								<h2 className="font-bold text-4xl">Disable default questions</h2>
-								<p className="text-xl mt-2">
+							<div className="col-span-1 my-auto justify-center">
+								<h2 className="text-4xl font-bold">Disable default questions</h2>
+								<p className="mt-2 text-xl">
 									Don&apos;t like a question in the bot? You can disable it in your server with premium!
 								</p>
 							</div>
 						</Fade>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 justify-center my-12 md:my-24 text-left max-w-7xl gap-12 px-8 mx-auto">
+					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
 						<Fade bottom>
-							<div className="col-span-1 justify-center my-auto">
-								<h2 className="font-bold text-4xl">Custom paranoia frequency</h2>
-								<p className="text-xl mt-2">
+							<div className="col-span-1 my-auto justify-center">
+								<h2 className="text-4xl font-bold">Custom paranoia frequency</h2>
+								<p className="mt-2 text-xl">
 									Want questions to always be revealed? With premium, you can customize how often the question will be
 									revealed when playing paranoia!
 								</p>
 							</div>
-							<div className="col-span-1 justify-center my-auto p-4 dark:bg-theme-d2 bg-white rounded-md hidden md:block">
+							<div className="col-span-1 my-auto hidden justify-center rounded-md bg-white p-4 dark:bg-theme-d2 md:block">
 								<CustomParanoiaExample />
 							</div>
 						</Fade>

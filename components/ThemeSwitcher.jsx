@@ -15,10 +15,10 @@ export default function ThemeSwitcher({ className = "" }) {
 
 	return (
 		<button
-			className={`md:dark:hover:bg-white/10 md:hover:bg-black/10 transition p-2 rounded-lg ${className}`}
+			className={`rounded-lg p-2 transition md:hover:bg-black/10 md:dark:hover:bg-white/10 ${className}`}
 			onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
 			aria-label="Change theme">
-			{resolvedTheme === "dark" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+			{resolvedTheme === "dark" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
 		</button>
 	);
 }

@@ -12,15 +12,15 @@ export default function PremiumPricingPlan({
 	disabled = false,
 }) {
 	return (
-		<div className="rounded-lg bg-gradient-to-r from-violet-600 to-red-500 bg-clip p-1 shadow-lg">
-			<div className="px-6 py-8  h-full dark:bg-theme-d1 bg-white rounded-md text-center">
+		<div className="bg-clip rounded-lg bg-gradient-to-r from-violet-600 to-red-500 p-1 shadow-lg">
+			<div className="h-full rounded-md  bg-white px-6 py-8 text-center dark:bg-theme-d1">
 				<div className="mb-6">
 					<h2 className="text-2xl font-semibold">{planName}</h2>
 					<p className="text-lg dark:text-gray-200">{planDescription}</p>
 				</div>
-				<div className="py-3 border-t border-b inline-block">
+				<div className="inline-block border-t border-b py-3">
 					{planFeatures.map((f, index) => (
-						<p className="text-lg py-0.5" key={index}>
+						<p className="py-0.5 text-lg" key={index}>
 							{f}
 						</p>
 					))}

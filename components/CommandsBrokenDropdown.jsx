@@ -14,13 +14,13 @@ export default function CommandsBrokenDropdown() {
 
 	return (
 		<div>
-			<button className="text-lg text-red-400 hover:text-red-500 transition" onClick={collapseCommand}>
+			<button className="text-lg text-red-400 transition hover:text-red-500" onClick={collapseCommand}>
 				Commands not working?
 			</button>
 			<div
-				className="overflow-hidden transition-[height] duration-300 h-0 bg-discord-blurple/30 rounded-md mt-2 max-w-2xl mx-auto text-left "
+				className="mx-auto mt-2 h-0 max-w-2xl overflow-hidden rounded-md bg-discord-blurple/30 text-left transition-[height] duration-300 "
 				ref={collapseElement}>
-				<div className="px-4 py-2 border border-discord-blurple rounded-md">
+				<div className="rounded-md border border-discord-blurple px-4 py-2">
 					<div className="text-center">
 						<h2 className="text-lg font-semibold">Command Issues</h2>
 						<p>
@@ -30,7 +30,7 @@ export default function CommandsBrokenDropdown() {
 					</div>
 					<div className="mt-2">
 						<h3 className="font-semibold">If you are an admin and YOU can&apos;t see commands:</h3>
-						<ol className="list-decimal list-inside">
+						<ol className="list-inside list-decimal">
 							<li>
 								If you have more than 50 bots in your server, commands may not show up for the bot. This is something on
 								Discord&apos;s end, and we can&apos;t fix it.
@@ -45,7 +45,7 @@ export default function CommandsBrokenDropdown() {
 					</div>
 					<div className="mt-2">
 						<h3 className="font-semibold">If a non-admin can&apos;t see commands:</h3>
-						<ol className="list-decimal list-inside">
+						<ol className="list-inside list-decimal">
 							<li>If you aren&apos;t an admin, tell an admin to follow the steps below:</li>
 							<li>
 								Make sure the everyone or member role has the <b>Use Application Commands</b> permission in the role
@@ -59,7 +59,7 @@ export default function CommandsBrokenDropdown() {
 					</div>
 					<div className="mt-2">
 						<h3 className="font-semibold">If you are on a phone or tablet:</h3>
-						<ol className="list-decimal list-inside">
+						<ol className="list-inside list-decimal">
 							<li>If you see &quot;Interaction Failed&quot;, update your app in the app store/play store.</li>
 							<li>
 								If you are using Discord on the <u>browser</u> of a mobile device (phone/tablet), they will not show up.

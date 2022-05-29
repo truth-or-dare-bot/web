@@ -45,10 +45,10 @@ const questions = [
 
 export default function QuestionListExample() {
 	return (
-		<div className="h-72 overflow-hidden select-none">
+		<div className="h-72 select-none overflow-hidden">
 			<Parallax speed={-30}>
 				{questions.map(q => (
-					<p key={q} className="text-xl whitespace-nowrap dark:odd:text-gray-300 odd:text-gray-600  mt-1 font-mono">
+					<p key={q} className="mt-1 whitespace-nowrap font-mono text-xl  odd:text-gray-600 dark:odd:text-gray-300">
 						{q}
 					</p>
 				))}

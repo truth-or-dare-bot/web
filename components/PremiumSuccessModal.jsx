@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function PremiumSuccessModal({ show = false, transaction, state }) {
 	return (
 		<div
-			className={`fixed inset-0 z-[999] bg-black/60 w-full h-full overflow-hidden flex items-center justify-center ${
+			className={`fixed inset-0 z-[999] flex h-full w-full items-center justify-center overflow-hidden bg-black/60 ${
 				show ? "" : "hidden"
 			}`}>
 			<div className="flex flex-col items-center">
 				<div className="mx-4">
-					<div className="bg-white p-6 text-black rounded-lg mx-auto max-w-2xl relative">
+					<div className="relative mx-auto max-w-2xl rounded-lg bg-white p-6 text-black">
 						<button
-							className="rounded-full absolute top-0 right-0 bg-red-400 text-red-900 w-8 h-8 -mt-2 -mr-2 flex items-center justify-center"
+							className="absolute top-0 right-0 -mt-2 -mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-red-400 text-red-900"
 							onClick={_ => state(false)}>
 							<FontAwesomeIcon icon={faXmark} />
 						</button>
@@ -28,7 +28,7 @@ export default function PremiumSuccessModal({ show = false, transaction, state }
 								</a>
 								.
 							</p>
-							<h2 className="text-lg font-semibold mt-4">Activation Instructions</h2>
+							<h2 className="mt-4 text-lg font-semibold">Activation Instructions</h2>
 							<p>
 								Run &quot;/premium activate&quot; in a server of your choice! Do not hesitate to reach out to us if you
 								have any questions.
