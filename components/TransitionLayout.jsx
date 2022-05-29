@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function TransitionLayout({ children, location }) {
 	const [currentRoute, setCurrentRoute] = useState(location);
@@ -19,10 +19,7 @@ export default function TransitionLayout({ children, location }) {
 					window.scrollTo(0, 0);
 				}
 			}}
-			className={`transition-opacity duration-200 ${
-				transitionStage === "fadeOut" ? "opacity-0" : ""
-			} `}
-		>
+			className={`transition-opacity duration-200 ${transitionStage === "fadeOut" ? "opacity-0" : ""} `}>
 			{displayChildren}
 		</div>
 	);

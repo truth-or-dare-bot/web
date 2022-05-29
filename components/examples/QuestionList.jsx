@@ -47,11 +47,8 @@ export default function QuestionListExample() {
 	return (
 		<div className="h-72 overflow-hidden select-none">
 			<Parallax speed={-30}>
-				{questions.map((q) => (
-					<p
-						key={q}
-						className="text-xl whitespace-nowrap dark:odd:text-gray-300 odd:text-gray-600  mt-1 font-mono"
-					>
+				{questions.map(q => (
+					<p key={q} className="text-xl whitespace-nowrap dark:odd:text-gray-300 odd:text-gray-600  mt-1 font-mono">
 						{q}
 					</p>
 				))}

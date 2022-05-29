@@ -10,11 +10,7 @@ export default function NotFoundPage() {
 					<Button href="/" className="px-4 py-2 text-white">
 						Home Page
 					</Button>
-					<Button
-						href="/support"
-						className="sm:ml-2 sm:mt-0 mt-2 px-4 py-2 text-white"
-						external
-					>
+					<Button href="/support" className="sm:ml-2 sm:mt-0 mt-2 px-4 py-2 text-white" external>
 						Get Support
 					</Button>
 				</div>

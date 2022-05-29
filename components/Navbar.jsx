@@ -1,19 +1,19 @@
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useRef } from "react";
+import { useEffect } from "react";
+
 import Logo from "./Logo";
 import NavItem from "./NavItem";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { useRef } from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export default function Navbar() {
 	const collapseElement = useRef(null);
 
 	useEffect(() => {
-		window.addEventListener("click", (e) => collapseMenu(e, true));
+		window.addEventListener("click", e => collapseMenu(e, true));
 	}, []);
 
 	function collapseMenu(_, noOpen = false) {
@@ -37,11 +37,7 @@ export default function Navbar() {
 					</Link>
 					<div className="ml-auto md:hidden flex items-center">
 						<ThemeSwitcher className="p-1 mr-2" />
-						<button
-							className="text-xl p-1"
-							onClick={collapseMenu}
-							aria-label="Open menu"
-						>
+						<button className="text-xl p-1" onClick={collapseMenu} aria-label="Open menu">
 							<FontAwesomeIcon icon={faBars} />
 						</button>
 					</div>
@@ -59,8 +55,7 @@ export default function Navbar() {
 								href="/invite"
 								className="hover:bg-discord-blurple/30 bg-discord-blurple/20 text-discord-blurple font-semibold px-2 py-1 transition rounded-lg mr-2 items-center"
 								target="_blank"
-								rel="noopener noreferrer"
-							>
+								rel="noopener noreferrer">
 								<FontAwesomeIcon className="mr-2" icon={faDiscord} />
 								Add Truth or Dare
 							</a>
@@ -68,10 +63,7 @@ export default function Navbar() {
 						</div>
 					</div>
 				</div>
-				<div
-					className="md:hidden overflow-hidden transition-[height] duration-300 h-0"
-					ref={collapseElement}
-				>
+				<div className="md:hidden overflow-hidden transition-[height] duration-300 h-0" ref={collapseElement}>
 					<div className="mtr-2 flex flex-col ">
 						<NavItem href="/">Home</NavItem>
 						<NavItem href="/commands">Commands</NavItem>
@@ -81,8 +73,7 @@ export default function Navbar() {
 						</NavItem>
 						<div className="flex items-center">
 							<NavItem href="/invite" external>
-								<FontAwesomeIcon icon={faDiscord} className="mr-1" /> Add Truth
-								or Dare
+								<FontAwesomeIcon icon={faDiscord} className="mr-1" /> Add Truth or Dare
 							</NavItem>
 						</div>
 					</div>

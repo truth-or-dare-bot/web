@@ -8,8 +8,7 @@ export default function divider({ type, className = "" }) {
 				width="100%"
 				height="100"
 				viewBox="0 0 100 100"
-				preserveAspectRatio="none"
-			>
+				preserveAspectRatio="none">
 				<path d="M0 100 C 20 0 50 0 100 100 Z"></path>
 			</svg>
 		);
@@ -23,8 +22,7 @@ export default function divider({ type, className = "" }) {
 				width="100%"
 				height="100"
 				viewBox="0 0 100 100"
-				preserveAspectRatio="none"
-			>
+				preserveAspectRatio="none">
 				<path d="M0 0 C 50 100 80 100 100 0 Z"></path>
 			</svg>
 		);

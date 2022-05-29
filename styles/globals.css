@@ -38,8 +38,8 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
 	font-family: "Rubik", sans-serif;
 }
 
@@ -67,8 +67,7 @@ iframe {
 	flex: 1;
 }
 
-.discord-light-theme
-	:is(.discord-embed-title, .discord-replied-message-username) {
+.discord-light-theme :is(.discord-embed-title, .discord-replied-message-username) {
 	color: #060607;
 }
 
@@ -84,8 +83,6 @@ iframe {
 	color: #fff;
 }
 
-.discord-light-theme
-	.discord-replied-message
-	.discord-replied-message-content:hover {
+.discord-light-theme .discord-replied-message .discord-replied-message-content:hover {
 	color: #00aff4;
 }

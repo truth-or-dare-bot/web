@@ -15,19 +15,11 @@ export default function OpenGraph({
 				<title>{title}</title>
 				<meta key="description" name="description" content={description} />
 				<meta key="theme-color" name="theme-color" content="#5865F2" />
-				<meta
-					key="format-detection"
-					name="format-detection"
-					content="telephone=no"
-				/>
+				<meta key="format-detection" name="format-detection" content="telephone=no" />
 
 				{/* Twitter */}
 				<meta name="twitter:card" content="summary" key="twitter-card" />
-				<meta
-					name="twitter:creator"
-					content="@truthordareteam"
-					key="twitter-handle"
-				/>
+				<meta name="twitter:creator" content="@truthordareteam" key="twitter-handle" />
 
 				{/* Open Graph */}
 				<meta property="og:url" content={url} key="og-url" />
@@ -38,20 +30,9 @@ export default function OpenGraph({
 			</Head>
 
 			{/* Script */}
-			<Script
-				src="https://js.chargebee.com/v2/chargebee.js"
-				strategy="lazyOnload"
-			/>
-			<Script
-				src="https://arc.io/widget.min.js#GE2t6vuH"
-				async
-				defer
-				strategy="lazyOnload"
-			/>
-			<Script
-				src="https://sa.truthordarebot.xyz/latest.js"
-				strategy="lazyOnload"
-			/>
+			<Script src="https://js.chargebee.com/v2/chargebee.js" strategy="lazyOnload" />
+			<Script src="https://arc.io/widget.min.js#GE2t6vuH" async defer strategy="lazyOnload" />
+			<Script src="https://sa.truthordarebot.xyz/latest.js" strategy="lazyOnload" />
 		</>
 	);
 }

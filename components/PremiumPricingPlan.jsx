@@ -30,9 +30,7 @@ export default function PremiumPricingPlan({
 					<p className="text-md dark:text-gray-200">USD {planCycle}</p>
 				</div>
 				<div className="mt-4">
-					<Button onClick={() => clickEvent({ planId, planName, price })}>
-						{buttonLabel}
-					</Button>
+					<Button onClick={() => disabled || clickEvent({ planId, planName, price })}>{buttonLabel}</Button>
 				</div>
 			</div>
 		</div>

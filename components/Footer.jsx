@@ -1,8 +1,5 @@
-import {
-	faDiscord,
-	faGithub,
-	faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+
 import Button from "./Button";
 import Divider from "./Divider";
 import FooterLink from "./FooterLink";
@@ -11,34 +8,19 @@ import IconLink from "./IconLink";
 export default function Footer() {
 	return (
 		<div>
-			<Divider
-				type="curveUp"
-				className="dark:fill-theme-d1 fill-theme-l2 -mt-32"
-			/>
+			<Divider type="curveUp" className="dark:fill-theme-d1 fill-theme-l2 -mt-32" />
 			<footer className="dark:bg-theme-d1 bg-theme-l2 pb-5 text-center sm:text-left">
 				<div className="max-w-7xl px-6 mx-auto">
 					{/* Footer Content */}
 					<div className="sm:flex py-8">
 						<div className="w-full flex flex-col md:flex-row justify-between">
 							<div className="p-1 flex-col flex">
-								<h1 className="text-lg font-bold">
-									Play Truth or Dare in your Discord server!
-								</h1>
-								<p className="dark:text-gray-300">
-									Featuring thousands of questions.
-								</p>
+								<h1 className="text-lg font-bold">Play Truth or Dare in your Discord server!</h1>
+								<p className="dark:text-gray-300">Featuring thousands of questions.</p>
 								<p className="text-2xl mt-1">
 									<IconLink href="/support" title="support" icon={faDiscord} />
-									<IconLink
-										href="https://twitter.com/truthordareteam"
-										title="twitter"
-										icon={faTwitter}
-									/>
-									<IconLink
-										href="https://github.com/tandpfun/truth-or-dare"
-										title="github"
-										icon={faGithub}
-									/>
+									<IconLink href="https://twitter.com/truthordareteam" title="twitter" icon={faTwitter} />
+									<IconLink href="https://github.com/tandpfun/truth-or-dare" title="github" icon={faGithub} />
 								</p>
 							</div>
 
@@ -48,20 +30,14 @@ export default function Footer() {
 									Invite Bot
 								</FooterLink>
 								<FooterLink href="/premium">Premium</FooterLink>
-								<FooterLink
-									href="https://github.com/tandpfun/truth-or-dare"
-									external
-								>
+								<FooterLink href="https://github.com/tandpfun/truth-or-dare" external>
 									GitHub
 								</FooterLink>
 							</div>
 
 							<div className="p-1 flex-col flex">
 								<h2 className="font-bold uppercase">Resources</h2>
-								<FooterLink
-									href="https://docs.truthordarebot.xyz/api-docs"
-									external
-								>
+								<FooterLink href="https://docs.truthordarebot.xyz/api-docs" external>
 									API Docs
 								</FooterLink>
 								<FooterLink href="/support" external>
@@ -80,13 +56,8 @@ export default function Footer() {
 
 							<div className="p-1 flex-col flex">
 								<h2 className="font-bold text-lg">Truth or Dare Premium</h2>
-								<p className=" dark:text-gray-300">
-									Custom questions and much more!
-								</p>
-								<Button
-									href="/premium"
-									className="flex-shrink mx-auto sm:mr-auto sm:ml-0 px-4 py-2 mt-2"
-								>
+								<p className=" dark:text-gray-300">Custom questions and much more!</p>
+								<Button href="/premium" className="flex-shrink mx-auto sm:mr-auto sm:ml-0 px-4 py-2 mt-2">
 									Get Premium
 								</Button>
 							</div>
@@ -95,10 +66,7 @@ export default function Footer() {
 
 					{/* Copyright */}
 					<div className="sm:w-full border-t border-gray-400">
-						<p className="pt-4 ml-2">
-							&copy; 2020-{new Date().getFullYear()} Truth or Dare Bot. All
-							rights reserved.
-						</p>
+						<p className="pt-4 ml-2">&copy; 2020-{new Date().getFullYear()} Truth or Dare Bot. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>

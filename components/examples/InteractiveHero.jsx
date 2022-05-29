@@ -10,7 +10,7 @@ import {
 	DiscordMessages,
 } from "@skyra/discord-components-react";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function DiscordExample() {
 	const { resolvedTheme } = useTheme();
@@ -25,12 +25,12 @@ export default function DiscordExample() {
 	function fetchQuestion(type = "truth", rating = "PG") {
 		setLoading(true);
 		fetch(`https://api.truthordarebot.xyz/v1/${type}?rating=${rating}`)
-			.then((res) => res.json())
-			.then((data) => {
+			.then(res => res.json())
+			.then(data => {
 				setData(data);
 				setLoading(false);
 			})
-			.catch((err) => {
+			.catch(err => {
 				console.error(err);
 				setLoading(false);
 			});
@@ -43,60 +43,32 @@ export default function DiscordExample() {
 	}
 
 	const TODMessage = (
-		<DiscordMessages
-			className="rounded-lg"
-			lightTheme={resolvedTheme === "light"}
-		>
-			<DiscordMessage
-				author="Truth or Dare"
-				avatar="/icon-192x192.png"
-				bot
-				verified
-			>
-				<DiscordCommand
-					slot="reply"
-					author="Coding"
-					avatar="/coding.png"
-					command="/truth"
-				></DiscordCommand>
-				<DiscordEmbed
-					slot="embeds"
-					color="#3B82F6"
-					embedTitle={isLoading ? "Loading..." : data?.question}
-				>
-					<DiscordEmbedFooter slot="footer">
-						Type: {data?.type || "TRUTH"} | Rating: PG
-					</DiscordEmbedFooter>
+		<DiscordMessages className="rounded-lg" lightTheme={resolvedTheme === "light"}>
+			<DiscordMessage author="Truth or Dare" avatar="/icon-192x192.png" bot verified>
+				<DiscordCommand slot="reply" author="Coding" avatar="/coding.png" command="/truth"></DiscordCommand>
+				<DiscordEmbed slot="embeds" color="#3B82F6" embedTitle={isLoading ? "Loading..." : data?.question}>
+					<DiscordEmbedFooter slot="footer">Type: {data?.type || "TRUTH"} | Rating: PG</DiscordEmbedFooter>
 				</DiscordEmbed>
 				<DiscordAttachments slot="components">
 					<DiscordActionRow>
 						<DiscordButton
 							type="success"
 							disabled={isLoading}
-							onClick={(e) =>
-								!e.currentTarget.disabled ? handleButtonClick("truth") : null
-							}
-						>
+							onClick={e => (!e.currentTarget.disabled ? handleButtonClick("truth") : null)}>
 							Truth
 						</DiscordButton>
 						<DiscordButton
 							type="destructive"
 							disabled={isLoading}
-							onClick={(e) =>
-								!e.currentTarget.disabled ? handleButtonClick("dare") : null
-							}
-						>
+							onClick={e => (!e.currentTarget.disabled ? handleButtonClick("dare") : null)}>
 							Dare
 						</DiscordButton>
 						<DiscordButton
 							type="primary"
 							disabled={isLoading}
-							onClick={(e) =>
-								!e.currentTarget.disabled
-									? handleButtonClick(Math.random() > 0.5 ? "truth" : "dare")
-									: null
-							}
-						>
+							onClick={e =>
+								!e.currentTarget.disabled ? handleButtonClick(Math.random() > 0.5 ? "truth" : "dare") : null
+							}>
 							Random
 						</DiscordButton>
 					</DiscordActionRow>
@@ -110,27 +82,10 @@ export default function DiscordExample() {
 
 	const inviteMessage = (
 		<div>
-			<DiscordMessages
-				className="rounded-lg"
-				lightTheme={resolvedTheme === "light"}
-			>
-				<DiscordMessage
-					author="Truth or Dare"
-					avatar="/icon-192x192.png"
-					bot
-					verified
-				>
-					<DiscordCommand
-						slot="reply"
-						author="Coding"
-						avatar="/coding.png"
-						command="/invite"
-					></DiscordCommand>
-					<DiscordEmbed
-						slot="embeds"
-						color="#3B82F6"
-						embedTitle="Wanna keep playing?"
-					>
+			<DiscordMessages className="rounded-lg" lightTheme={resolvedTheme === "light"}>
+				<DiscordMessage author="Truth or Dare" avatar="/icon-192x192.png" bot verified>
+					<DiscordCommand slot="reply" author="Coding" avatar="/coding.png" command="/invite"></DiscordCommand>
+					<DiscordEmbed slot="embeds" color="#3B82F6" embedTitle="Wanna keep playing?">
 						<DiscordEmbedDescription slot="description">
 							Add the bot to your server with the button below!
 						</DiscordEmbedDescription>

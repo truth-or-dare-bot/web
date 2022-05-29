@@ -1,13 +1,6 @@
 export default function Logo(props) {
 	return (
-		<svg
-			width="278"
-			height="241"
-			viewBox="0 0 278 241"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			{...props}
-		>
+		<svg width="278" height="241" viewBox="0 0 278 241" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
 			<path
 				fillRule="evenodd"
 				clipRule="evenodd"

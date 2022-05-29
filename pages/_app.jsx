@@ -1,17 +1,19 @@
+import { config as faConfig } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { ThemeProvider } from "next-themes";
+import revealConfig from "react-reveal/globals";
+import { ParallaxProvider } from "react-scroll-parallax";
+
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import OpenGraph from "../components/OpenGraph";
-import "../styles/globals.css";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config as faConfig } from "@fortawesome/fontawesome-svg-core";
-faConfig.autoAddCss = false;
-import revealConfig from "react-reveal/globals";
-revealConfig({ ssrFadeout: true });
-import { ThemeProvider } from "next-themes";
-import { AuthProvider } from "../context/auth";
-import { ParallaxProvider } from "react-scroll-parallax";
-import Footer from "../components/Footer";
 import TransitionLayout from "../components/TransitionLayout";
-import Script from "next/script";
+import { AuthProvider } from "../context/auth";
+import "../styles/globals.css";
+
+faConfig.autoAddCss = false;
+
+revealConfig({ ssrFadeout: true });
 
 function MyApp({ Component, pageProps, router }) {
 	return (

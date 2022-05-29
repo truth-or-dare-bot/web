@@ -80,8 +80,7 @@ const messageContentCases = [
 		],
 	},
 	{
-		question:
-			"What is one thing that you have always wanted to do but have not gotten around to it yet?",
+		question: "What is one thing that you have always wanted to do but have not gotten around to it yet?",
 		commandAuthor: "Ben",
 		responses: [
 			{
@@ -143,50 +142,27 @@ export default function DiscordExample() {
 	const [messageContents, setMessageContents] = useState(null);
 
 	useEffect(() => {
-		setMessageContents(
-			messageContentCases[
-				Math.floor(Math.random() * messageContentCases.length)
-			]
-		);
+		setMessageContents(messageContentCases[Math.floor(Math.random() * messageContentCases.length)]);
 	}, []);
 
 	if (!messageContents) return;
 
 	const messageComponents = messageContents.responses.map((m, index) => (
-		<DiscordMessage
-			key={index}
-			author={m.author}
-			avatar={`/${m.author.toLowerCase()}.png`}
-		>
+		<DiscordMessage key={index} author={m.author} avatar={`/${m.author.toLowerCase()}.png`}>
 			{m.message}
 		</DiscordMessage>
 	));
 
 	const TODMessage = (
-		<DiscordMessages
-			className="rounded-lg"
-			lightTheme={resolvedTheme === "light"}
-		>
-			<DiscordMessage
-				author="Truth or Dare"
-				avatar="/icon-192x192.png"
-				bot
-				verified
-			>
+		<DiscordMessages className="rounded-lg" lightTheme={resolvedTheme === "light"}>
+			<DiscordMessage author="Truth or Dare" avatar="/icon-192x192.png" bot verified>
 				<DiscordCommand
 					slot="reply"
 					author={messageContents.commandAuthor}
 					avatar={`/${messageContents.commandAuthor.toLowerCase()}.png`}
-					command="/truth"
-				></DiscordCommand>
-				<DiscordEmbed
-					slot="embeds"
-					color="#3B82F6"
-					embedTitle={messageContents.question}
-				>
-					<DiscordEmbedFooter slot="footer">
-						Type: TRUTH | Rating: PG
-					</DiscordEmbedFooter>
+					command="/truth"></DiscordCommand>
+				<DiscordEmbed slot="embeds" color="#3B82F6" embedTitle={messageContents.question}>
+					<DiscordEmbedFooter slot="footer">Type: TRUTH | Rating: PG</DiscordEmbedFooter>
 				</DiscordEmbed>
 			</DiscordMessage>
 			{messageComponents}

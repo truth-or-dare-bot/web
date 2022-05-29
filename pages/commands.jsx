@@ -1,20 +1,11 @@
 import { useCallback, useState } from "react";
+
 import commands from "../assets/commands.json";
 import CommandListCommand from "../components/CommandListCommand";
 import CommandsBrokenDropdown from "../components/CommandsBrokenDropdown";
 import OpenGraph from "../components/OpenGraph";
 
-const commandOrder = [
-	"truth",
-	"dare",
-	"tod",
-	"wyr",
-	"nhie",
-	"paranoia",
-	"random",
-	"help",
-	"invite",
-];
+const commandOrder = ["truth", "dare", "tod", "wyr", "nhie", "paranoia", "random", "help", "invite"];
 
 export default function IndexPage() {
 	const [query, setQuery] = useState("");
@@ -25,20 +16,15 @@ export default function IndexPage() {
 		(commandOrder.includes(b.name) ? commandOrder.indexOf(b.name) : 999);
 
 	const combined = [
-		...commands
-			.filter((c) => c.name.toLowerCase().includes(noCharQuery))
-			.sort(sort),
-		...commands
-			.filter((c) => c.description.toLowerCase().includes(noCharQuery))
-			.sort(sort),
+		...commands.filter(c => c.name.toLowerCase().includes(noCharQuery)).sort(sort),
+		...commands.filter(c => c.description.toLowerCase().includes(noCharQuery)).sort(sort),
 	];
 
 	const filteredCommands = combined.filter(
-		(value, index, self) =>
-			index === self.findIndex((t) => t.name === value.name)
+		(value, index, self) => index === self.findIndex(t => t.name === value.name)
 	);
 
-	const onSearchChange = useCallback((event) => {
+	const onSearchChange = useCallback(event => {
 		const query = event.target.value;
 		setQuery(query);
 	}, []);
@@ -53,8 +39,7 @@ export default function IndexPage() {
 				<div className="max-w-4xl mx-auto md:mt-12 text-center px-2">
 					<h1 className="font-bold text-4xl">Commands</h1>
 					<p className="text-lg">
-						Truth or Dare Bot&apos;s commands are built into Discord with Slash
-						Commands.
+						Truth or Dare Bot&apos;s commands are built into Discord with Slash Commands.
 						<br />
 						Type &quot;/&quot; on your keyboard to see them!
 					</p>
