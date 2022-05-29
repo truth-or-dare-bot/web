@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Button({
 	children,
-	href,
+	href = "",
+	onClick = null,
 	className = "",
 	icon = null,
 	external = false,
@@ -22,7 +23,10 @@ export default function Button({
 		</a>
 	) : (
 		<Link href={href} scroll={false}>
-			<button className={classes}>{children}</button>
+			<button className={classes} onClick={onClick}>
+				{icon ? <FontAwesomeIcon className="mr-2" icon={icon} /> : ""}
+				{children}
+			</button>
 		</Link>
 	);
 }

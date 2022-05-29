@@ -45,7 +45,7 @@ const questions = [
 
 export default function QuestionListExample() {
 	return (
-		<div className="h-72 overflow-clip select-none">
+		<div className="h-72 overflow-hidden select-none">
 			<Parallax speed={-30}>
 				{questions.map((q) => (
 					<p

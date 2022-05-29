@@ -109,6 +109,20 @@ const messageContentCases = [
 		],
 	},
 	{
+		question: "Speak only in emojis for the next 5 minutes",
+		commandAuthor: "AC-Dc",
+		responses: [
+			{
+				author: "AC-Dc",
+				message: "💖💖✨,👉👈💖💖✨🥺👉👈",
+			},
+			{
+				author: "WaterNinja",
+				message: "🤨🤨 ayo ac??",
+			},
+		],
+	},
+	{
 		question: "What app do you hate, but use anyway?",
 		commandAuthor: "Sam",
 		responses: [

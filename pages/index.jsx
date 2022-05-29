@@ -5,27 +5,27 @@ import Fade from "react-reveal";
 import Image from "next/image";
 // @ts-ignore
 import GamesImage from "../assets/img/games.svg";
-import QuestionListExample from "../components/QuestionListExample";
+import QuestionListExample from "../components/examples/QuestionList";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
 const DiscordHeroExample = dynamic(
-	async () => await import("../components/DiscordHeroExample"),
+	async () => await import("../components/examples/InteractiveHero"),
 	{ ssr: false }
 );
 
 const DiscordFriendsExample = dynamic(
-	async () => await import("../components/DiscordFriendsExample"),
+	async () => await import("../components/examples/Friends"),
 	{ ssr: false }
 );
 
 export default function IndexPage() {
 	return (
 		<div>
-			<div className="backgroundCurves fixed top-0 w-screen h-screen z-[-999]"></div>
+			<div className="indexBackground fixed top-0 w-screen h-screen z-[-999]"></div>
 			<div className="flex flex-col mt-24">
 				{/* Index Hero */}
-				<div className="flex-grow" style={{ minHeight: "70vh" }}>
+				<div style={{ minHeight: "70vh" }}>
 					<div className="md:px-24 container px-6 mx-auto mb-20">
 						<div className="lg:grid-cols-2 md:mt-24 grid grid-cols-1 gap-4">
 							<div className="flex flex-col">

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 export default function OpenGraph({
 	title = "Truth or Dare Bot - Discord Bot!",
@@ -9,28 +10,36 @@ export default function OpenGraph({
 	const url = `https://truthordarebot.xyz${router.asPath}`;
 
 	return (
-		<Head>
-			<title>{title}</title>
-			<meta key="description" name="description" content={description} />
+		<>
+			<Head>
+				<title>{title}</title>
+				<meta key="description" name="description" content={description} />
 
-			{/* Twitter */}
-			<meta name="twitter:card" content="summary" key="twitter-card" />
-			<meta
-				name="twitter:creator"
-				content="@truthordareteam"
-				key="twitter-handle"
-			/>
+				{/* Twitter */}
+				<meta name="twitter:card" content="summary" key="twitter-card" />
+				<meta
+					name="twitter:creator"
+					content="@truthordareteam"
+					key="twitter-handle"
+				/>
 
-			{/* Open Graph */}
-			<meta property="og:url" content={url} key="og-url" />
-			<meta property="og:image" content="/logo.png" key="og-image" />
-			<meta
-				property="og:site_name"
-				content="Truth or Dare Generator"
-				key="og-site-name"
+				{/* Open Graph */}
+				<meta property="og:url" content={url} key="og-url" />
+				<meta property="og:image" content="/logo.png" key="og-image" />
+				<meta
+					property="og:site_name"
+					content="Truth or Dare Generator"
+					key="og-site-name"
+				/>
+				<meta property="og:title" content={title} key="og-title" />
+				<meta property="og:description" content={description} key="og-desc" />
+
+				{/* Scripts */}
+			</Head>
+			<Script
+				src="https://js.chargebee.com/v2/chargebee.js"
+				strategy="lazyOnload"
 			/>
-			<meta property="og:title" content={title} key="og-title" />
-			<meta property="og:description" content={description} key="og-desc" />
-		</Head>
+		</>
 	);
 }

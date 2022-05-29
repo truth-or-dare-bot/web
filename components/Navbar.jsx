@@ -18,6 +18,7 @@ export default function Navbar() {
 
 	function collapseMenu(_, noOpen = false) {
 		const elem = collapseElement.current;
+		if (!elem) return;
 		if (elem.clientHeight) {
 			elem.style.height = 0;
 		} else if (!noOpen) {
@@ -27,7 +28,7 @@ export default function Navbar() {
 
 	return (
 		<div className="flex justify-center">
-			<div className="backdrop-blur-lg z-[999] w-[90%] md:w-[60rem] fixed top-0 px-4 py-2 my-4 rounded-md dark:bg-white/5 bg-black/5 dark:border-white/10 border-black/10 border mx-auto">
+			<div className="backdrop-blur-lg z-[100] w-[90%] md:w-[60rem] fixed top-0 px-4 py-2 my-4 rounded-md dark:bg-white/5 bg-black/5 dark:border-white/10 border-black/10 border mx-auto">
 				<div className="flex items-center">
 					<Link href="/">
 						<a title="Home">
@@ -56,7 +57,7 @@ export default function Navbar() {
 						<div className="ml-auto flex items-center">
 							<a
 								href="/invite"
-								className="hover:bg-discord-blurple/20 bg-discord-blurple/10 text-discord-blurple font-semibold px-2 py-1 transition rounded-lg mr-2 items-center"
+								className="hover:bg-discord-blurple/30 bg-discord-blurple/20 text-discord-blurple font-semibold px-2 py-1 transition rounded-lg mr-2 items-center"
 								target="_blank"
 								rel="noopener noreferrer"
 							>

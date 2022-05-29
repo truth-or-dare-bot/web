@@ -16,6 +16,14 @@ const nextConfig = {
 			},
 		];
 	},
+	async rewrites() {
+		return [
+			{
+				source: "/api/:slug*",
+				destination: "http://localhost:4001/api/:slug*",
+			},
+		];
+	},
 };
 
 module.exports = nextConfig;
