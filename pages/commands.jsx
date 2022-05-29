@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import commands from "../assets/commands.json";
 import CommandListCommand from "../components/CommandListCommand";
 import CommandsBrokenDropdown from "../components/CommandsBrokenDropdown";
+import OpenGraph from "../components/OpenGraph";
 
 const commandOrder = [
 	"truth",
@@ -44,7 +45,11 @@ export default function IndexPage() {
 
 	return (
 		<div>
-			<div className="flex flex-col mt-24 pb-32">
+			<OpenGraph
+				title="Truth or Dare Bot - Commands"
+				description="Need help with commands? Here's a list of Truth or Dare Bot's slash commands and how to fix commands not working properly."
+			/>
+			<div className="flex flex-col mt-24 pb-8 md:pb-32">
 				<div className="max-w-4xl mx-auto md:mt-12 text-center px-2">
 					<h1 className="font-bold text-4xl">Commands</h1>
 					<p className="text-lg">

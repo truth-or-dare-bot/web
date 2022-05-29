@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { Fade } from "react-reveal";
 import Button from "../components/Button";
+import OpenGraph from "../components/OpenGraph";
 import PremiumPricingPlan from "../components/PremiumPricingPlan";
 import PremiumSuccessModal from "../components/PremiumSuccessModal";
 import ScreenOverlay from "../components/ScreenOverlay";
@@ -186,13 +187,17 @@ export default function PremiumPage() {
 
 	return (
 		<div>
+			<OpenGraph
+				title="Truth or Dare Bot - Premium"
+				description="Unlock premium features and support the development of the bot with Truth or Dare Premium!"
+			/>
 			<ScreenOverlay {...loader} />
 			<PremiumSuccessModal
 				show={showModal}
 				transaction={transaction}
 				state={setModal}
 			/>
-			<div className="flex flex-col mb-48">
+			<div className="flex flex-col pb-8 md:pb-32">
 				<div className="premiumHeader pt-24 pb-24">
 					<div className="md:mt-24 px-6 mx-auto">
 						<div className="text-center text-white">
@@ -220,14 +225,14 @@ export default function PremiumPage() {
 						</div>
 					</div>
 				</div>
-				<div className="mt-16">
+				<div className="mt-16 mx-2">
 					<div className="max-w-2xl mx-auto text-center">
 						<h1 className="font-extrabold text-5xl bg-gradient-to-r from-violet-600 to-red-500 bg-clip-text text-transparent">
 							Premium Plans
 						</h1>
 					</div>
 					<div
-						className="mt-8 flex flex-col md:flex-row justify-center gap-8 max-w-7xl mx-auto px-8"
+						className="mt-8 flex flex-col md:flex-row justify-center gap-8 max-w-7xl mx-auto px-4"
 						style={{ flex: "1 1 0px" }}
 					>
 						{premiumPlans.map((props, index) => (
@@ -242,7 +247,7 @@ export default function PremiumPage() {
 						))}
 					</div>
 				</div>
-				<div className="mt-32">
+				<div className="mt-32 mx-2">
 					<div className="max-w-2xl mx-auto text-center">
 						<h1 className="font-extrabold text-5xl bg-gradient-to-r from-violet-600 to-red-500 bg-clip-text text-transparent">
 							Premium Perks

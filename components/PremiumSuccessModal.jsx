@@ -6,7 +6,6 @@ export default function PremiumSuccessModal({
 	transaction,
 	state,
 }) {
-	console.log(transaction);
 	return (
 		<div
 			className={`fixed inset-0 z-[999] bg-black/60 w-full h-full overflow-hidden flex items-center justify-center ${

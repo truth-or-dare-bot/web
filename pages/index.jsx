@@ -133,7 +133,7 @@ export default function IndexPage() {
 					className="dark:fill-theme-d4 dark:bg-theme-d3 fill-theme-l2 bg-theme-l3"
 				/>
 				{/* Get Started */}
-				<div className="dark:bg-theme-d3 bg-theme-l3 pt-24 pb-56">
+				<div className="dark:bg-theme-d3 bg-theme-l3 pt-24 pb-8 md:pb-56">
 					<Fade bottom>
 						<div className="max-w-4xl mx-auto text-center px-4">
 							<h1 className="text-5xl font-extrabold">
