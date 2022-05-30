@@ -28,7 +28,7 @@ export default function Navbar() {
 
 	return (
 		<div className="flex justify-center">
-			<div className="fixed top-0 z-[100] my-4 mx-auto w-[90%] rounded-md border border-black/10 bg-black/5 px-4 py-2 backdrop-blur-lg dark:border-white/10 dark:bg-white/5 lg:w-[60rem]">
+			<div className="fixed top-0 z-[100] my-4 mx-auto w-[90%] rounded-md border border-black/10 bg-black/5 py-2 px-4 backdrop-blur-lg dark:border-white/10 dark:bg-white/5 lg:w-[62rem]">
 				<div className="flex items-center">
 					<Link href="/">
 						<a title="Home">
