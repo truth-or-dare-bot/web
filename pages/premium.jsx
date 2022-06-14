@@ -14,6 +14,10 @@ const CustomQuestionsExample = dynamic(async () => await import("../components/e
 	ssr: false,
 });
 
+const RepeatPreventionExample = dynamic(async () => await import("../components/examples/RepeatPrevention"), {
+	ssr: false,
+});
+
 const DisableDefaultsExample = dynamic(async () => await import("../components/examples/DisableDefaults"), {
 	ssr: false,
 });
@@ -29,6 +33,7 @@ const premiumPlans = [
 		planDescription: "Premium features for one server of your choice!",
 		planFeatures: [
 			"One premium server",
+			"No Repeated Questions",
 			"Unlimited custom questions",
 			"Disable default questions",
 			"Custom paranoia frequency",
@@ -42,6 +47,7 @@ const premiumPlans = [
 		planDescription: "Premium features for three servers of your choice!",
 		planFeatures: [
 			"Three premium servers",
+			"No Repeated Questions",
 			"Unlimited custom questions",
 			"Disable default questions",
 			"Custom paranoia frequency",
@@ -55,6 +61,7 @@ const premiumPlans = [
 		planDescription: "A premium Truth or Dare bot with your server's branding!",
 		planFeatures: [
 			"Custom avatar & username",
+			"No Repeated Questions",
 			"Unlimited custom questions",
 			"Disable default questions",
 			"Custom paranoia frequency",
@@ -256,13 +263,14 @@ export default function PremiumPage() {
 					</div>
 					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
 						<Fade bottom>
-							<div className="col-span-1 my-auto hidden select-none justify-center p-4 md:block">
-								<DisableDefaultsExample />
+							<div className="col-span-1 hidden justify-center md:block">
+								<RepeatPreventionExample />
 							</div>
 							<div className="col-span-1 my-auto justify-center">
-								<h2 className="text-4xl font-bold">Disable default questions</h2>
+								<h2 className="text-4xl font-bold">Repeat prevention</h2>
 								<p className="mt-2 text-xl">
-									Don&apos;t like a question in the bot? You can disable it in your server with premium!
+									Bored of repeated questions? Repeat prevention is activated in all premium servers! You{" "}
+									<b>won&apos;t get a repeated question</b> until you&apos;ve been through the entire question list.
 								</p>
 							</div>
 						</Fade>
@@ -270,14 +278,27 @@ export default function PremiumPage() {
 					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
 						<Fade bottom>
 							<div className="col-span-1 my-auto justify-center">
-								<h2 className="text-4xl font-bold">Custom paranoia frequency</h2>
+								<h2 className="text-4xl font-bold">Disable default questions</h2>
 								<p className="mt-2 text-xl">
-									Want questions to always be revealed? With premium, you can customize how often the question will be
-									revealed when playing paranoia!
+									Don&apos;t like a question in the bot? You can <b>disable it</b> in your server with premium!
 								</p>
 							</div>
+							<div className="col-span-1 my-auto hidden select-none justify-center p-4 md:block">
+								<DisableDefaultsExample />
+							</div>
+						</Fade>
+					</div>
+					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
+						<Fade bottom>
 							<div className="col-span-1 my-auto hidden justify-center rounded-md bg-white p-4 dark:bg-theme-d2 md:block">
 								<CustomParanoiaExample />
+							</div>
+							<div className="col-span-1 my-auto justify-center">
+								<h2 className="text-4xl font-bold">Custom paranoia frequency</h2>
+								<p className="mt-2 text-xl">
+									Want questions to <b>always</b> be revealed? With premium, you can customize how often the question
+									will be revealed when playing paranoia!
+								</p>
 							</div>
 						</Fade>
 					</div>

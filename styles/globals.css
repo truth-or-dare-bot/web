@@ -86,3 +86,7 @@ iframe {
 .discord-light-theme .discord-replied-message .discord-replied-message-content:hover {
 	color: #00aff4;
 }
+
+.discord-custom-emoji-image {
+	display: inline-block;
+}
