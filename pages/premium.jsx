@@ -184,7 +184,7 @@ export default function PremiumPage() {
 
 	function openManagementPortal() {
 		// @ts-expect-error Imported in script tag on frontend
-		const cb = cbInstance || window.Chargebee.init({ site: "truthordarebot" });
+		const cb = cbInstance || window.Chargebee.init({ site: "truthordarebot", iframeOnly: true });
 		setCbInstance(cb);
 
 		cb.createChargebeePortal().open();
