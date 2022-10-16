@@ -8,11 +8,11 @@ export default function TermsPage() {
 				<div className="mx-auto w-full max-w-5xl px-4 md:mt-12">
 					<div className="text-center">
 						<h1 className="text-4xl font-bold">Terms Of Service</h1>
-						<p className="text-lg">Effective Date: May 30th, 2022</p>
+						<p className="text-lg">Effective Date: October 16th, 2022</p>
 					</div>
 					<div className="mt-4 text-lg">
 						<p>
-							Truth or Dare Bot (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;) operates the truthordarebot.xyz
+							Truth or Dare Bot (the &quot;Developers&quot;, &quot;us&quot;, &quot;we&quot;, or &quot;our&quot;) operates the truthordarebot.xyz
 							website and the Truth or Dare Discord application (the &quot;Service&quot; or &quot;bot&quot;).
 						</p>
 						<h1 className="mt-4 text-2xl font-semibold">Terms</h1>
@@ -27,6 +27,10 @@ export default function TermsPage() {
 						<p className="mt-1">
 							&quot;Truth or Dare Bot&quot;, and our &quot;TD&quot; logo, are trademarks of Truth or Dare Bot. This
 							website, the Truth or Dare Discord bot, and our &quot;TD&quot; logo are copyrights of Truth or Dare Bot.
+						</p>
+						<h1 className="mt-4 text-2xl font-semibold">Acceptable Use</h1>
+						<p className="mt-1">
+							The Service may only be used within the scope of what it is provided for, under these Terms and applicable law. Users are solely responsible for making sure that their use of the Service violates no law, regulations, or third-party rights. Therefore, we reserve the right to take any appropriate measure to protect legitimate interests of the Service including denying Users access to the Service or reporting any misconduct preformed through the Service to applicable authorities at our sole discretion. 
 						</p>
 						<h1 className="mt-4 text-2xl font-semibold">Limitations</h1>
 						<p className="mt-1">
@@ -50,13 +54,67 @@ export default function TermsPage() {
 							using the Service you are agreeing to be bound by the then current version of these terms of service and
 							privacy policy.
 						</p>
+						<h1 className="mt-4 text-2xl font-semibold">Paid Products</h1>
+						<p className="mt-1">
+							Users may purchase products including Truth or Dare Premium (&quot;premium&quot;) on this Website and/or inside of the Discord Application. All purchases are subject to our Refund Policy and the terms and policies of our payment services and payment processors listed below:
+						</p>
+						<ul className="mt-2 ml-10 list-disc">
+							<li>
+								<b>Discord.</b> Discord provides the in-app checkout for Truth or Dare Premium. Purchases made through Discord are subject the Discord {" "}
+								<a
+									href="https://discord.com/terms"
+									className="text-blue-500 hover:text-blue-600"
+									target="_blank"
+									rel="noopener noreferrer">
+									Terms of Service
+								</a>
+								{" "} and <a
+									href="https://support.discord.com/hc/en-us/articles/4410339366295"
+									className="text-blue-500 hover:text-blue-600"
+									target="_blank"
+									rel="noopener noreferrer">
+									Paid Services Terms
+								</a>.
+							</li>
+							<li>
+								<b>ChargeBee.</b> ChargeBee is a payment service provided by ChargeBee Inc. We use ChargeBee as a
+								payment processor for purchases of goods on this site. Purchases made through this Website are subject to the ChargeBee {" "}
+								<a
+									href="https://www.chargebee.com/terms"
+									className="text-blue-500 hover:text-blue-600"
+									target="_blank"
+									rel="noopener noreferrer">
+									Terms of Service
+								</a>
+								.
+							</li>
+						</ul>
 						<h1 className="mt-4 text-2xl font-semibold">Refund Policy</h1>
 						<p className="mt-1">
-							Unless exceptions apply, we accept a 5 days money back guarantee for any purchased goods on this website,
-							for any reason, and without justification. We may additionally offer refunds on a case-by-case basis. The
-							developers must be contacted to receive a refund. Any other form of chargeback will result in a loss of
-							the product and revoked access to our services.
+							Unless exceptions apply, purchases are subject to a refund policy dependant on where the service in which the goods were purchased from:
 						</p>
+						<ul className="mt-2 ml-10 list-disc">
+							<li>
+								<b>Discord.</b> Goods purchased within the Discord Application are subject to refund policies listed within the Discord {" "}
+								<a
+									href="https://discord.com/terms"
+									className="text-blue-500 hover:text-blue-600"
+									target="_blank"
+									rel="noopener noreferrer">
+									Terms of Service
+								</a>
+								{" "} and <a
+									href="https://support.discord.com/hc/en-us/articles/4410339366295"
+									className="text-blue-500 hover:text-blue-600"
+									target="_blank"
+									rel="noopener noreferrer">
+									Paid Services Terms
+								</a>. Refunds for these goods may be requested by contacting Discord directly. We cannot offer refunds on our end.
+							</li>
+							<li>
+								<b>This Website.</b> Unless exceptions apply, we accept a 5 days money back guarantee for any purchased goods on this website, for any reason, and without justification. We may additionally offer refunds on a case-by-case basis. The developers must be contacted to receive a refund. Any other form of chargeback will result in a loss of the product and revoked access to our services.
+							</li>
+						</ul>
 						<h1 className="mt-4 text-2xl font-semibold">Contact Us</h1>
 						<p className="mt-1">
 							If you have any questions, we&apos;re happy to answer them! Please email{" "}
