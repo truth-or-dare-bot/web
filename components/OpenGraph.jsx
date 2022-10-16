@@ -31,7 +31,6 @@ export default function OpenGraph({
 
 			{/* Script */}
 			<Script src="https://js.chargebee.com/v2/chargebee.js" strategy="lazyOnload" />
-			<Script src="https://arc.io/widget.min.js#GE2t6vuH" async defer strategy="lazyOnload" />
 			<Script src="https://sa.truthordarebot.xyz/latest.js" strategy="lazyOnload" />
 		</>
 	);
