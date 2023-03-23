@@ -36,7 +36,7 @@ export default function IndexPage() {
 									server!
 								</h1>
 								<div className="my-4 text-2xl text-gray-800 dark:text-gray-100 md:text-3xl">
-									Featuring <b>thousands</b> of questions and used in almost <b>a million</b> communities.
+									Featuring <b>thousands</b> of questions and used in more than <b>a million</b> communities.
 								</div>
 								<div className="mt-2">
 									<Button href="/invite" external icon={faDiscord}>
