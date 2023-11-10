@@ -9,17 +9,16 @@ export default function PremiumSuccessModal({ show = false, transaction, state }
 			}`}>
 			<div className="flex flex-col items-center">
 				<div className="mx-4">
-					<div className="relative mx-auto max-w-2xl rounded-lg bg-white p-6 text-black">
-						<button
-							className="absolute top-0 right-0 -mt-2 -mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-red-400 text-red-900"
-							onClick={_ => state(false)}>
+					<div className="relative mx-auto max-w-2xl rounded-md bg-white p-6 text-black">
+						<button className="absolute top-2 right-4 text-xl" onClick={_ => state(false)}>
 							<FontAwesomeIcon icon={faXmark} />
 						</button>
 						<div>
 							<h1 className="text-2xl font-semibold">Thank You! 🎉</h1>
 							<p className="mt-1">
-								Thank you so much for your donation. You now have <b>{transaction?.premiumSlots}</b> total premium
-								slot(s)!
+								Thank you for subscribing to Truth or Dare Bot premium. People like you help us keep the bot up and
+								running! You now have <b>{transaction?.premiumSlots}</b> total premium slot
+								{transaction?.premiumSlots > 1 ? "s" : ""}.
 							</p>
 							<p className="mt-1">
 								A recept has been emailed to you. If you need purchase support, feel free to reach out in our{" "}

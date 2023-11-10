@@ -9,6 +9,7 @@ import PremiumPricingPlan from "../components/PremiumPricingPlan";
 import PremiumSuccessModal from "../components/PremiumSuccessModal";
 import ScreenOverlay from "../components/ScreenOverlay";
 import { useUserContext } from "../context/auth";
+import CheckoutModal from "../components/CheckoutModal";
 
 const CustomQuestionsExample = dynamic(async () => await import("../components/examples/CustomQuestions"), {
 	ssr: false,
@@ -39,6 +40,7 @@ const premiumPlans = [
 			"Custom paranoia frequency",
 			"Priority support",
 		],
+		serverCount: 1,
 		price: 2.99,
 	},
 	{
@@ -53,6 +55,7 @@ const premiumPlans = [
 			"Custom paranoia frequency",
 			"Priority support",
 		],
+		serverCount: 3,
 		price: 7.99,
 	},
 	{
@@ -80,11 +83,50 @@ export default function PremiumPage() {
 		type: undefined,
 		message: undefined,
 	});
-	const [showModal, setModal] = useState(false);
+	const [showSuccessModal, setSuccessModal] = useState(false);
+	const [showCheckoutModal, setCheckoutModal] = useState(false);
+	const [checkoutPlanId, setCheckoutPlanId] = useState();
 	const [transaction, setTransaction] = useState(null);
-	const [_userState, setUser] = useUserContext();
+	const [userState, setUser] = useUserContext();
 
-	async function openPurchaseModal({ planId }) {
+	async function openCheckout({ planId }) {
+		setLoad({
+			show: true,
+			type: "load",
+			message: "This should only take a few seconds...",
+		});
+
+		const res = await fetch("/api/users/@me").catch(console.error);
+		if (!res) {
+			setLoad({
+				show: true,
+				type: "error",
+				message:
+					"An error occurred. Try reloading the page, and report this in our support server if it keeps happening.",
+			});
+			return;
+		}
+
+		if (res.ok) {
+			const user = await res.json();
+			if (user) {
+				setUser(user);
+			}
+		}
+
+		setLoad({
+			show: false,
+			type: "",
+			message: "",
+		});
+		setCheckoutPlanId(planId);
+		setCheckoutModal(true);
+	}
+
+	async function openChargebee() {
+		const planId = checkoutPlanId;
+
+		setCheckoutModal(false);
 		setLoad({
 			show: true,
 			type: "load",
@@ -155,7 +197,7 @@ export default function PremiumPage() {
 					.then(res => res.json())
 					.catch(_ => null);
 				if (!capture) return (this.view = "error");
-				setModal(true);
+				setSuccessModal(true);
 				setTransaction(capture);
 				setLoad({
 					show: false,
@@ -197,7 +239,14 @@ export default function PremiumPage() {
 				description="Unlock premium features and support the development of the bot with Truth or Dare Premium!"
 			/>
 			<ScreenOverlay {...loader} />
-			<PremiumSuccessModal show={showModal} transaction={transaction} state={setModal} />
+			<PremiumSuccessModal show={showSuccessModal} transaction={transaction} state={setSuccessModal} />
+			<CheckoutModal
+				show={showCheckoutModal}
+				openCheckout={openChargebee}
+				setShow={setCheckoutModal}
+				user={userState}
+				plan={premiumPlans.find(p => p.planId === checkoutPlanId)}
+			/>
 			<div className="flex flex-col pb-8 md:pb-32">
 				<div className="premiumHeader pt-24 pb-24">
 					<div className="mx-auto px-6 md:mt-24">
@@ -234,7 +283,7 @@ export default function PremiumPage() {
 						{premiumPlans.map((props, index) => (
 							<div className="flex-1" key={index}>
 								<Fade bottom delay={index * 150}>
-									<PremiumPricingPlan clickEvent={openPurchaseModal} {...props} />
+									<PremiumPricingPlan clickEvent={openCheckout} {...props} />
 								</Fade>
 							</div>
 						))}
