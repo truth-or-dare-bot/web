@@ -10,6 +10,7 @@ import PremiumSuccessModal from "../components/PremiumSuccessModal";
 import ScreenOverlay from "../components/ScreenOverlay";
 import { useUserContext } from "../context/auth";
 import CheckoutModal from "../components/CheckoutModal";
+import Divider from "../components/Divider";
 
 const CustomQuestionsExample = dynamic(async () => await import("../components/examples/CustomQuestions"), {
 	ssr: false,
@@ -31,49 +32,51 @@ const premiumPlans = [
 	{
 		planId: "one-server-USD-Monthly",
 		planName: "Premium 1x",
-		planDescription: "Premium features for one server of your choice!",
+		planDescription: "Premium perks for one server!",
 		planFeatures: [
-			"One premium server",
-			"No Repeated Questions",
-			"Unlimited custom questions",
-			"Disable default questions",
-			"Custom paranoia frequency",
-			"Priority support",
+			"🔂 Repeat Prevention",
+			"📅 Question of the Day",
+			"🎨 Unlimited Custom Questions",
+			"⚡ Custom Paranoia Frequency",
+			"🚫 Disable Default Questions",
 		],
+		className: "bg-gradient-to-br from-violet-600 to-red-500",
+		themeColor: "text-purple-500",
 		serverCount: 1,
 		price: 2.99,
 	},
 	{
 		planId: "three-servers-USD-Monthly",
 		planName: "Premium 3x",
-		planDescription: "Premium features for three servers of your choice!",
+		planDescription: "Premium perks for three servers!",
 		planFeatures: [
-			"Three premium servers",
-			"No Repeated Questions",
-			"Unlimited custom questions",
-			"Disable default questions",
-			"Custom paranoia frequency",
-			"Priority support",
+			"🔂 Repeat Prevention",
+			"📅 Question of the Day",
+			"🎨 Unlimited Custom Questions",
+			"⚡ Custom Paranoia Frequency",
+			"🚫 Disable Default Questions",
 		],
+		themeColor: "text-orange-500",
+		className: "bg-gradient-to-tl from-yellow-500 to-red-500",
 		serverCount: 3,
 		price: 7.99,
 	},
-	{
-		planId: "custom-bot-USD-Monthly",
-		planName: "Custom Bot",
-		planDescription: "A premium Truth or Dare bot with your server's branding!",
-		planFeatures: [
-			"Custom avatar & username",
-			"No Repeated Questions",
-			"Unlimited custom questions",
-			"Disable default questions",
-			"Custom paranoia frequency",
-			"Priority support",
-		],
-		price: 9.99,
-		buttonLabel: "Coming Soon",
-		disabled: true,
-	},
+	// {
+	// 	planId: "custom-bot-USD-Monthly",
+	// 	planName: "Custom Bot",
+	// 	planDescription: "A premium Truth or Dare bot with your server's branding!",
+	// 	planFeatures: [
+	// 		"Custom avatar & username",
+	// 		"No Repeated Questions",
+	// 		"Unlimited custom questions",
+	// 		"Disable default questions",
+	// 		"Custom paranoia frequency",
+	// 		"Priority support",
+	// 	],
+	// 	price: 9.99,
+	// 	buttonLabel: "Coming Soon",
+	// 	disabled: true,
+	// },
 ];
 
 export default function PremiumPage() {
@@ -248,7 +251,7 @@ export default function PremiumPage() {
 				plan={premiumPlans.find(p => p.planId === checkoutPlanId)}
 			/>
 			<div className="flex flex-col pb-8 md:pb-32">
-				<div className="premiumHeader pt-24 pb-24">
+				<div className="bg-gradient-to-r from-violet-600/50 to-red-500/50 pt-24 pb-36">
 					<div className="mx-auto px-6 md:mt-24">
 						<div className="text-center text-white">
 							<h1 className="text-6xl font-extrabold">Truth or Dare Premium</h1>
@@ -271,14 +274,13 @@ export default function PremiumPage() {
 						</div>
 					</div>
 				</div>
+				<Divider type="curveDownInverse" className="-mt-[100px] fill-white dark:fill-theme-d2" />
 				<div className="mx-2 mt-16">
 					<div className="mx-auto max-w-2xl text-center">
-						<h1 className="bg-gradient-to-r from-violet-600 to-red-500 bg-clip-text text-5xl font-extrabold text-transparent">
-							Premium Plans
-						</h1>
+						<h1 className="text-5xl font-extrabold">Premium Plans</h1>
 					</div>
 					<div
-						className="mx-auto mt-8 flex max-w-7xl flex-col justify-center gap-8 px-4 md:flex-row"
+						className="mx-auto mt-8 flex max-w-5xl flex-col justify-center gap-8 px-4 md:flex-row"
 						style={{ flex: "1 1 0px" }}>
 						{premiumPlans.map((props, index) => (
 							<div className="flex-1" key={index}>
