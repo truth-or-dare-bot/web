@@ -39,7 +39,7 @@ export default function PremiumPricingPlan({
 				<div className="mt-4">
 					<Button
 						onClick={() => disabled || clickEvent({ planId, planName, price })}
-						className={"border-none hover:opacity-70 " + className}>
+						className={"border-none !text-white hover:opacity-70 " + className}>
 						{buttonLabel}
 					</Button>
 				</div>

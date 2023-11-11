@@ -12,6 +12,10 @@ import { useUserContext } from "../context/auth";
 import CheckoutModal from "../components/CheckoutModal";
 import Divider from "../components/Divider";
 
+const DailyQuestionExample = dynamic(async () => await import("../components/examples/DailyQuestion"), {
+	ssr: false,
+});
+
 const CustomQuestionsExample = dynamic(async () => await import("../components/examples/CustomQuestions"), {
 	ssr: false,
 });
@@ -293,18 +297,44 @@ export default function PremiumPage() {
 				</div>
 				<div className="mx-2 mt-32">
 					<div className="mx-auto max-w-2xl text-center">
-						<h1 className="bg-gradient-to-r from-violet-600 to-red-500 bg-clip-text text-5xl font-extrabold text-transparent">
-							Premium Perks
-						</h1>
+						<h1 className="text-5xl font-extrabold">Premium Perks</h1>
 					</div>
 					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
 						<Fade bottom>
 							<div className="col-span-1 my-auto justify-center">
-								<h2 className="text-4xl font-bold">Custom questions</h2>
+								<h2 className="text-4xl font-bold">🔂 Repeat Prevention</h2>
 								<p className="mt-2 text-xl">
-									With premium, you can <b>add your own</b> questions to the bot. Add fun questions you came up with, or
-									inside jokes with your friends! You can also disable the global question list so the bot only shows
-									the questions you created.
+									Bored of repeated questions? Repeat prevention is activated in all premium servers! You{" "}
+									<b>won&apos;t get a repeated question</b> until you&apos;ve been through the entire question list.
+								</p>
+							</div>
+							<div className="col-span-1 hidden justify-center md:block">
+								<RepeatPreventionExample />
+							</div>
+						</Fade>
+					</div>
+					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
+						<Fade bottom>
+							<div className="col-span-1 hidden justify-center md:block">
+								<DailyQuestionExample />
+							</div>
+							<div className="col-span-1 my-auto justify-center">
+								<h2 className="text-4xl font-bold">📅 Question of the Day</h2>
+								<p className="mt-2 text-xl">
+									Set up <b>daily or hourly</b> question channels with premium! In each channel, Truth or Dare will send
+									a question every day, automatically. QotD is a great way to automatically increase activity in a
+									server.
+								</p>
+							</div>
+						</Fade>
+					</div>
+					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
+						<Fade bottom>
+							<div className="col-span-1 my-auto justify-center">
+								<h2 className="text-4xl font-bold">🎨 Custom Questions</h2>
+								<p className="mt-2 text-xl">
+									With premium, you can <b>add your own</b> questions to the bot. You can also disable the global
+									question list to show the questions you created.
 								</p>
 							</div>
 							<div className="col-span-1 hidden justify-center md:block">
@@ -312,44 +342,32 @@ export default function PremiumPage() {
 							</div>
 						</Fade>
 					</div>
-					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
-						<Fade bottom>
-							<div className="col-span-1 hidden justify-center md:block">
-								<RepeatPreventionExample />
-							</div>
-							<div className="col-span-1 my-auto justify-center">
-								<h2 className="text-4xl font-bold">Repeat prevention</h2>
-								<p className="mt-2 text-xl">
-									Bored of repeated questions? Repeat prevention is activated in all premium servers! You{" "}
-									<b>won&apos;t get a repeated question</b> until you&apos;ve been through the entire question list.
-								</p>
-							</div>
-						</Fade>
-					</div>
-					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
-						<Fade bottom>
-							<div className="col-span-1 my-auto justify-center">
-								<h2 className="text-4xl font-bold">Disable default questions</h2>
-								<p className="mt-2 text-xl">
-									Don&apos;t like a question in the bot? You can <b>disable it</b> in your server with premium!
-								</p>
-							</div>
-							<div className="col-span-1 my-auto hidden select-none justify-center p-4 md:block">
-								<DisableDefaultsExample />
-							</div>
-						</Fade>
-					</div>
+
 					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
 						<Fade bottom>
 							<div className="col-span-1 my-auto hidden justify-center rounded-md bg-white p-4 dark:bg-theme-d2 md:block">
 								<CustomParanoiaExample />
 							</div>
 							<div className="col-span-1 my-auto justify-center">
-								<h2 className="text-4xl font-bold">Custom paranoia frequency</h2>
+								<h2 className="text-4xl font-bold">⚡ Custom Paranoia Frequency</h2>
 								<p className="mt-2 text-xl">
 									Want questions to <b>always</b> be revealed? With premium, you can customize how often the question
 									will be revealed when playing paranoia!
 								</p>
+							</div>
+						</Fade>
+					</div>
+
+					<div className="my-12 mx-auto grid max-w-7xl grid-cols-1 justify-center gap-12 px-8 text-left md:my-24 md:grid-cols-2">
+						<Fade bottom>
+							<div className="col-span-1 my-auto justify-center">
+								<h2 className="text-4xl font-bold">🚫 Disable Default Questions</h2>
+								<p className="mt-2 text-xl">
+									Don&apos;t like a question in the bot? You can <b>disable it</b> in your server with premium!
+								</p>
+							</div>
+							<div className="col-span-1 my-auto hidden select-none justify-center p-4 md:block">
+								<DisableDefaultsExample />
 							</div>
 						</Fade>
 					</div>
