@@ -61,7 +61,7 @@ export default function CheckoutModal({ show = false, setShow, user, openCheckou
 							</div>
 							<div className="flex-shrink-0 bg-gray-100 p-6 sm:pt-16">
 								<div className="flex h-16 w-full flex-row items-center overflow-hidden rounded-md">
-									<div className={"flex text-4xl " + plan.themeColor}>
+									<div className={"flex text-4xl " + plan?.themeColor}>
 										<FontAwesomeIcon icon={faCrown} />
 									</div>
 									<div className="flex-shrink-0 flex-grow pl-4">
