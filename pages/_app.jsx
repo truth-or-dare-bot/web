@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps, router }) {
 	return (
 		<>
 			<OpenGraph />
-			<ThemeProvider defaultTheme="system" attribute="class">
+			<ThemeProvider defaultTheme="dark" attribute="class">
 				<AuthProvider>
 					<ParallaxProvider>
 						<div className="flex min-h-screen flex-col">
