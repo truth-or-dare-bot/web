@@ -17,8 +17,8 @@ export default function CheckoutModal({ show = false, setShow, user, openCheckou
 							<FontAwesomeIcon icon={faXmark} />
 						</button>
 						<div className="flex flex-col sm:flex-row">
-							<div className="flex flex-col gap-2 p-6">
-								<h1 className="text-2xl">Checkout</h1>
+							<div className="flex flex-col gap-2 p-8">
+								<h1 className="text-2xl">🛒 Checkout</h1>
 								<div>
 									<p>
 										We&apos;re so excited to activate your premium features! Log in with the Discord account you would
@@ -61,7 +61,7 @@ export default function CheckoutModal({ show = false, setShow, user, openCheckou
 							</div>
 							<div className="flex-shrink-0 bg-gray-100 p-6 sm:pt-16">
 								<div className="flex h-16 w-full flex-row items-center overflow-hidden rounded-md">
-									<div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-md bg-yellow-500/40 text-2xl text-orange-400">
+									<div className={"flex text-4xl " + plan.themeColor}>
 										<FontAwesomeIcon icon={faCrown} />
 									</div>
 									<div className="flex-shrink-0 flex-grow pl-4">
