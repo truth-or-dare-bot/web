@@ -314,7 +314,7 @@ export default function PremiumPage() {
 									<div className="text-2xl font-bold">
 										Holiday Deal <span className="hidden sm:inline">•</span>
 									</div>
-									<div className="">20% off yearly with code</div>
+									<div className="">25% off yearly with code</div>
 									<code className="rounded-md bg-gray-200 px-2 py-0.5 dark:bg-theme-d4">HOLIDAYS23</code>
 								</div>
 							</div>
