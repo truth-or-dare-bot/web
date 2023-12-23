@@ -2,7 +2,7 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faCrown, faLock, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import Link from "next/link";
+import { planCycles } from "../pages/premium";
 
 export default function CheckoutModal({ show = false, setShow, user, openCheckout, plan }) {
 	return (
@@ -24,6 +24,7 @@ export default function CheckoutModal({ show = false, setShow, user, openCheckou
 										We&apos;re so excited to activate your premium features! Log in with the Discord account you would
 										like to activate from.
 									</p>
+									<p className="mt-4">🎁 Discount codes can be applied during the next step.</p>
 									<p className="mt-4">
 										Please join our{" "}
 										<a
@@ -72,13 +73,13 @@ export default function CheckoutModal({ show = false, setShow, user, openCheckou
 									</div>
 									<div className="flex-shrink-0 pl-6 text-right">
 										<h2 className="font-semibold">${plan?.price}</h2>
-										<p className="text-sm leading-tight text-gray-800">per month</p>
+										<p className="text-sm leading-tight text-gray-800">{planCycles[plan?.planCycle]?.toLowerCase()}</p>
 									</div>
 								</div>
 								<div className="my-4 h-[1px] bg-black"></div>
 								<div className="flex flex-row">
 									<div className="">Total</div>
-									<div className="ml-auto">${plan?.price}/mo</div>
+									<div className="ml-auto">${plan?.price}</div>
 								</div>
 								<div className="mt-12 sm:mt-24">
 									<div className="mt-4">

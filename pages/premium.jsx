@@ -32,11 +32,12 @@ const CustomParanoiaExample = dynamic(async () => await import("../components/ex
 	ssr: false,
 });
 
-const premiumPlans = [
+export const premiumPlans = [
 	{
 		planId: "one-server-USD-Monthly",
-		planName: "Premium 1x",
-		planDescription: "Premium perks for one server!",
+		planName: "Premium - Monthly",
+		planDescription: "Upgrade your Truth or Dare experience!",
+		planCycle: "monthly",
 		planFeatures: [
 			"🔂 Repeat Prevention",
 			"📅 Question of the Day",
@@ -50,9 +51,10 @@ const premiumPlans = [
 		price: 2.99,
 	},
 	{
-		planId: "three-servers-USD-Monthly",
-		planName: "Premium 3x",
-		planDescription: "Premium perks for three servers!",
+		planId: "one-server-USD-Yearly",
+		planName: "Premium - Yearly",
+		planDescription: "You get two months free with yearly!",
+		planCycle: "yearly",
 		planFeatures: [
 			"🔂 Repeat Prevention",
 			"📅 Question of the Day",
@@ -62,9 +64,25 @@ const premiumPlans = [
 		],
 		themeColor: "text-orange-500",
 		className: "bg-gradient-to-tl from-yellow-500 to-red-500",
-		serverCount: 3,
-		price: 7.99,
+		serverCount: 1,
+		price: 29.99,
 	},
+	// {
+	// 	planId: "three-servers-USD-Monthly",
+	// 	planName: "Premium 3x",
+	// 	planDescription: "Premium perks for three servers!",
+	// 	planFeatures: [
+	// 		"🔂 Repeat Prevention",
+	// 		"📅 Question of the Day",
+	// 		"🎨 Unlimited Custom Questions",
+	// 		"⚡ Custom Paranoia Frequency",
+	// 		"🚫 Disable Default Questions",
+	// 	],
+	// 	themeColor: "text-orange-500",
+	// 	className: "bg-gradient-to-tl from-yellow-500 to-red-500",
+	// 	serverCount: 3,
+	// 	price: 7.99,
+	// },
 	// {
 	// 	planId: "custom-bot-USD-Monthly",
 	// 	planName: "Custom Bot",
@@ -82,6 +100,11 @@ const premiumPlans = [
 	// 	disabled: true,
 	// },
 ];
+
+export const planCycles = {
+	monthly: "Per Month",
+	yearly: "Per Year",
+};
 
 export default function PremiumPage() {
 	const [cbInstance, setCbInstance] = useState(null);
@@ -256,7 +279,7 @@ export default function PremiumPage() {
 			/>
 			<div className="flex flex-col pb-8 md:pb-32">
 				<div className="bg-gradient-to-r from-violet-600/50 to-red-500/50 pt-24 pb-36">
-					<div className="mx-auto px-6 md:mt-24">
+					<div className="mx-auto px-6 md:mt-16">
 						<div className="text-center text-white">
 							<h1 className="text-6xl font-extrabold">Truth or Dare Premium</h1>
 							<h2 className="mt-2 text-3xl">Unlock premium features and support the development of the bot!</h2>
@@ -283,8 +306,22 @@ export default function PremiumPage() {
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-5xl font-extrabold">Premium Plans</h1>
 					</div>
+					<Fade bottom delay={0}>
+						<div className="bg-clip mx-auto mt-8 max-w-5xl rounded-lg bg-gradient-to-r from-red-500 to-white p-0.5 shadow-lg">
+							<div className="h-full rounded-md bg-white px-4 py-3 dark:bg-theme-d1">
+								<div className="flex items-center justify-center gap-2 text-xl">
+									<div className="text-4xl">🎁</div>
+									<div className="text-2xl font-bold">
+										Holiday Deal <span className="hidden sm:inline">•</span>
+									</div>
+									<div className="">20% off yearly with code</div>
+									<code className="rounded-md bg-gray-200 px-2 py-0.5 dark:bg-theme-d4">HOLIDAYS23</code>
+								</div>
+							</div>
+						</div>
+					</Fade>
 					<div
-						className="mx-auto mt-8 flex max-w-5xl flex-col justify-center gap-8 px-4 md:flex-row"
+						className="mx-auto mt-8 flex max-w-5xl flex-col justify-center gap-8 md:flex-row"
 						style={{ flex: "1 1 0px" }}>
 						{premiumPlans.map((props, index) => (
 							<div className="flex-1" key={index}>

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "./Button";
 import { faCrown } from "@fortawesome/free-solid-svg-icons";
+import { planCycles } from "../pages/premium";
 
 export default function PremiumPricingPlan({
 	planId,
@@ -11,12 +12,12 @@ export default function PremiumPricingPlan({
 	className,
 	themeColor,
 	clickEvent,
-	planCycle = "Per Month",
+	planCycle,
 	buttonLabel = "Purchase Now",
 	disabled = false,
 }) {
 	return (
-		<div className={"bg-clip rounded-lg p-1 shadow-lg transition hover:scale-[102%] " + className}>
+		<div className={"bg-clip rounded-lg p-0.5 shadow-lg transition hover:scale-[102%] " + className}>
 			<div className="h-full rounded-md bg-white px-6 py-8 text-center dark:bg-theme-d1">
 				<div className="mb-6 flex flex-col items-center">
 					<div className={"mb-1 bg-clip-text text-4xl " + themeColor}>
@@ -34,7 +35,7 @@ export default function PremiumPricingPlan({
 				</div>
 				<div className="mt-6">
 					<p className="text-4xl font-bold">${price}</p>
-					<p className="text-md dark:text-gray-200">USD {planCycle}</p>
+					<p className="text-md dark:text-gray-200">USD {planCycles[planCycle]}</p>
 				</div>
 				<div className="mt-4">
 					<Button
