@@ -306,20 +306,20 @@ export default function PremiumPage() {
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-5xl font-extrabold">Premium Plans</h1>
 					</div>
-					{/*<Fade bottom delay={0}>
+					<Fade bottom delay={0}>
 						<div className="bg-clip mx-auto mt-8 max-w-5xl rounded-lg bg-gradient-to-r from-red-500 to-white p-0.5 shadow-lg">
 							<div className="h-full rounded-md bg-white px-4 py-3 dark:bg-theme-d1">
 								<div className="flex items-center justify-center gap-2 text-xl">
-									<div className="text-4xl">🎁</div>
+									<div className="text-4xl">🎆</div>
 									<div className="text-2xl font-bold">
-										Holiday Deal <span className="hidden sm:inline">•</span>
+										New Years Deal <span className="hidden sm:inline">•</span>
 									</div>
-									<div className="">25% off yearly with code</div>
-									<code className="rounded-md bg-gray-200 px-2 py-0.5 dark:bg-theme-d4">HOLIDAYS23</code>
+									<div className="">24% off monthly & yearly!</div>
+									<code className="rounded-md bg-gray-200 px-2 py-0.5 dark:bg-theme-d4">NEW2024</code>
 								</div>
 							</div>
 						</div>
-					</Fade>*/}
+					</Fade>
 					<div
 						className="mx-auto mt-8 flex max-w-5xl flex-col justify-center gap-8 md:flex-row"
 						style={{ flex: "1 1 0px" }}>
